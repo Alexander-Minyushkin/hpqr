@@ -10,6 +10,8 @@ local_settings.py
 db.sqlite3
 media
 
+## gedit temp files
+*~
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
