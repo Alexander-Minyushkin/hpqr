@@ -21,10 +21,10 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "oo9(d$pg2b8k&2e)#9^jgete8gbdirencleu2wz1)-ttjc%*t6"
+SECRET_KEY = os.environ.get('HPQR_SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('HPQR_DEBUG')
 
 # Application definition
 
