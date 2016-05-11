@@ -1,0 +1,1 @@
+web: gunicorn hpqr.wsgi --log-file -
