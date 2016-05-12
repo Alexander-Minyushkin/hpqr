@@ -54,7 +54,7 @@ ROOT_URLCONF = 'hpqr.urls'
 TEMPLATES = (
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,6 +76,11 @@ WSGI_APPLICATION = 'hpqr.wsgi.application'
 
 DATABASES = {}
 DATABASES['default'] =  dj_database_url.config()
+
+# Telegram bot initialization
+import telepot
+bot = telepot.Bot(os.environ.get('HPQR_BOT'))
+
 
 
 AUTH_PASSWORD_VALIDATORS = (

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Print</title>
+</head>
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+    <!--<script type="text/javascript" src="../jquery.qrcode.min.js"></script>
+    -->
+    <script type="text/javascript" src="/static/js/jquery.qrcode.js"></script>
+    <script type="text/javascript" src="/static/js/qrcode.js"></script>
+    
+    <textarea rows="4" cols="50">
+If you want me to move my car send me a message via this link {{message_link}} or use QR-code below:
+    </textarea>    
+    <div id="qrcodeCanvas"></div>
+    <script>	
+        jQuery('#qrcodeCanvas').qrcode({
+            text	: "http://{{message_link}}"
+        });	
+    </script>
+
+</body>
+</html>
