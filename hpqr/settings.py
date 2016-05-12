@@ -29,6 +29,7 @@ DEBUG = os.environ.get('HPQR_DEBUG')
 # Application definition
 
 INSTALLED_APPS = (
+    'hpqw.apps.HpqwConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,12 +74,10 @@ WSGI_APPLICATION = 'hpqr.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+DATABASES = {}
+DATABASES['default'] =  dj_database_url.config()
+
+print DATABASES['default']
 
 AUTH_PASSWORD_VALIDATORS = (
     {
