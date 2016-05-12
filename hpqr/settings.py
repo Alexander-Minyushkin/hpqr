@@ -77,7 +77,6 @@ WSGI_APPLICATION = 'hpqr.wsgi.application'
 DATABASES = {}
 DATABASES['default'] =  dj_database_url.config()
 
-print DATABASES['default']
 
 AUTH_PASSWORD_VALIDATORS = (
     {
