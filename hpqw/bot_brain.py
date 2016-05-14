@@ -27,12 +27,12 @@ def get_print_link(con, host_name):
 
 
 def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", ugettext_lazy = ugettext_lazy):
-    help_text = (ugettext_lazy('Hello! I am Hot Parking Bot. I can understand commands:') + '\n\n' +
-                ugettext_lazy('/make - create QR code for your car') + '\n' +
-                ugettext_lazy('/make xxx - create QR code with car plate number (incomplete is OK). It is convenient if you have several cars.') +'\n' +
-                ugettext_lazy('/ls   - list all active QR-codes') +'\n' +
-                ugettext_lazy('/del_all - delete all codes.')+'\n' +
-                ugettext_lazy('/del id=XXX - delete code with id=XXX.')+'\n'
+    help_text = (ugettext_lazy('Hello! I am Hot Parking Bot. I can understand commands:\n\n') +
+                ugettext_lazy('/make - create QR code for your car\n') +
+                ugettext_lazy('/make xxx - create QR code with car plate number (incomplete is OK). It is convenient if you have several cars.\n') +
+                ugettext_lazy('/ls   - list all active QR-codes\n') +
+                ugettext_lazy('/del_all - delete all codes.\n') +
+                ugettext_lazy('/del id=XXX - delete code with id=XXX.\n')
                 )
     content_type, chat_type, chat_id = telepot.glance(msg)
     if content_type != 'text':
@@ -49,7 +49,7 @@ def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", uge
         bot.sendMessage(chat_id, ugettext_lazy("Print your QR-code: ") + link)
         return
     if text == '/ls':                   # List all 
-        out_msg = ugettext_lazy("Active QR-codes:") + "\n"
+        out_msg = ugettext_lazy("Active QR-codes:\n")
         for x in Connection.objects.filter(telegram_id=chat_id):
             link = get_print_link( x, host_name)
             out_msg = out_msg + "id = " + str(x.id) + " [" + str(x.car_id) + "] " + link +"\n"
