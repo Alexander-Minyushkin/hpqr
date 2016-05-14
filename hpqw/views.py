@@ -15,7 +15,7 @@ from hpqr.settings import bot
 # Create your views here.
 
 def telegram_hook(request):
-    return HttpResponse('hook')
+    return HttpResponse('hook' + str(request.POST))
 
 def index(request):   
     return render(request, 'index.html')
