@@ -11,10 +11,12 @@ from datetime import timedelta
 
 from hpqw.models import Connection
 from hpqr.settings import bot
+import hpqw.bot_brain as brain
 
 # Create your views here.
 
 def telegram_hook(request):
+    brain.read_msg(request.POST, bot, request.META['HTTP_HOST'])
     return HttpResponse('hook' + str(request.POST))
 
 def index(request):   
