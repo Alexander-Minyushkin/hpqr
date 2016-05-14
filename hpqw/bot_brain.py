@@ -2,7 +2,7 @@
 import telepot
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy 
-#def ugettext_lazy(x): return x
+def ugettext_lazy(x): return x
 from datetime import timedelta
 from random import randint
 from hpqw.models import Connection
