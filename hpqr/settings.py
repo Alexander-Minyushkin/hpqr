@@ -79,7 +79,9 @@ DATABASES['default'] =  dj_database_url.config()
 
 # Telegram bot initialization
 import telepot
-bot = telepot.Bot(os.environ.get('HPQR_BOT'))
+HPQR_BOT = os.environ.get('HPQR_BOT')
+bot_token = HPQR_BOT.split(':')[0]
+bot = telepot.Bot(HPQR_BOT)
 
 
 
