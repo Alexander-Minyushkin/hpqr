@@ -81,8 +81,15 @@ DATABASES['default'] =  dj_database_url.config()
 import telepot
 HPQR_BOT = os.environ.get('HPQR_BOT')
 bot_token = HPQR_BOT.split(':')[0]
+
 bot = telepot.Bot(HPQR_BOT)
 
+HPQR_HOST = os.environ.get('HPQR_HOST')
+#print HPQR_HOST +'/' + bot_token
+try:
+    bot.setWebhook(HPQR_HOST +'/' + bot_token)
+finally:
+    pass
 
 
 AUTH_PASSWORD_VALIDATORS = (
