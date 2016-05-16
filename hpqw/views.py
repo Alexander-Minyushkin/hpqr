@@ -5,6 +5,7 @@ from django.shortcuts import render
 #from django.utils.translation import ugettext_lazy as _
 def _(x): return x
 from django.http import HttpResponse, Http404
+from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
 from django.utils import timezone
 from datetime import timedelta
@@ -14,7 +15,10 @@ from hpqr.settings import bot
 import hpqw.bot_brain as brain
 
 # Create your views here.
+from django.views.decorators.http import require_http_methods
 
+@csrf_exempt
+@require_http_methods(["POST"])
 def telegram_hook(request):
     brain.read_msg(request.POST, bot, request.META['HTTP_HOST'])
     return HttpResponse('hook' + str(request.POST))
