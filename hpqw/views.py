@@ -23,8 +23,11 @@ def telegram_hook(request):
     print request.POST
     for key in request.POST:
         print key
-    brain.read_msg(request.POST, bot, request.META['HTTP_HOST'])
-    return HttpResponse('hook' + str(request.POST))
+    try:
+        brain.read_msg(request.POST, bot, request.META['HTTP_HOST'])
+    finally:
+        pass
+    return HttpResponse('hook')
 
 def index(request):   
     return render(request, 'index.html')
