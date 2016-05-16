@@ -20,6 +20,7 @@ from django.views.decorators.http import require_http_methods
 @csrf_exempt
 @require_http_methods(["POST"])
 def telegram_hook(request):
+    print request.POST
     brain.read_msg(request.POST, bot, request.META['HTTP_HOST'])
     return HttpResponse('hook' + str(request.POST))
 
