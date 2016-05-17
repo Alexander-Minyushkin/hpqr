@@ -23,8 +23,7 @@ import hpqw.bot_brain as brain
 
 @csrf_exempt
 @require_http_methods(["POST"])
-def telegram_hook(request): 
-    print json.loads(request.body)   
+def telegram_hook(request):     
     try:
         brain.read_msg(json.loads(request.body)['message'], bot, HPQR_HOST)
     finally:
