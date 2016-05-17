@@ -21,6 +21,8 @@ from django.views.decorators.http import require_http_methods
 @require_http_methods(["POST"])
 def telegram_hook(request):
     print request.POST
+    print request.body
+    print request.data
     for key in request.POST:
         print key
     try:
