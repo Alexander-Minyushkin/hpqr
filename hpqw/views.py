@@ -12,6 +12,7 @@ from datetime import timedelta
 
 from hpqw.models import Connection
 from hpqr.settings import bot
+from hpqr.settings import HPQR_HOST
 import hpqw.bot_brain as brain
 
 # Create your views here.
@@ -20,8 +21,11 @@ from django.views.decorators.http import require_http_methods
 @csrf_exempt
 @require_http_methods(["POST"])
 def telegram_hook(request):
+    print request.body['message']
+    print bot
+    print HPQR_HOST
     try:
-        brain.read_msg(request.body['message'], bot, request.META['HTTP_HOST'])
+        brain.read_msg(request.body['message'], bot, HPQR_HOST)
     finally:
         pass
     return HttpResponse('hook')
