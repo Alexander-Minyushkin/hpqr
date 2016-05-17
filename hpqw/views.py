@@ -21,7 +21,7 @@ from django.views.decorators.http import require_http_methods
 @require_http_methods(["POST"])
 def telegram_hook(request):
     try:
-        brain.read_msg(request.body, bot, request.META['HTTP_HOST'])
+        brain.read_msg(request.body['message'], bot, request.META['HTTP_HOST'])
     finally:
         pass
     return HttpResponse('hook')
