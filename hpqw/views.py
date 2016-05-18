@@ -16,6 +16,7 @@ import json
 from hpqw.models import Connection
 from hpqr.settings import bot
 from hpqr.settings import HPQR_HOST
+from hpqr.settings import HPQR_YANDEX_METRIKA
 import hpqw.bot_brain as brain
 
 # Create your views here.
@@ -31,19 +32,19 @@ def telegram_hook(request):
     return HttpResponse('hook')
 
 def index(request):   
-    return render(request, 'index.html')
+    return render(request, 'index.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
 
 def robots(request):   
     return render(request, 'robots.txt')
     
 def register(request):   
-    return render(request, 'register.html')
+    return render(request, 'register.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
     
 def credits(request):   
-    return render(request, 'credits.html')
+    return render(request, 'credits.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
     
 def contact(request):   
-    return render(request, 'contact.html')
+    return render(request, 'contact.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
     
 def check_inputs(id, pin):
     try:
@@ -61,7 +62,7 @@ def print_page(request, id, pin):
     check_inputs(id, pin)
     
     message_link = request.META['HTTP_HOST'] +"/" + id + "." + pin
-    return render(request, 'print.html', {'message_link':message_link})
+    return render(request, 'print.html', {'message_link':message_link, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
     
 def connection(request, id, pin):  
     check_inputs(id, pin)
@@ -85,6 +86,7 @@ def connection(request, id, pin):
     reply_message = con.message       
     reply_time = (con.wait_till - timezone.now()).seconds     
     #return HttpResponse("Good!: " + id + " -> " + pin)
-    return render(request, 'connection.html', {'id':id, 'pin':pin, 'reply_message':reply_message, 'reply_time':reply_time})
+    return render(request, 'connection.html', 
+                  {'id':id, 'pin':pin, 'reply_message':reply_message, 'reply_time':reply_time, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
   
 

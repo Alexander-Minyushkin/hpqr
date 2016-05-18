@@ -26,6 +26,8 @@ SECRET_KEY = os.environ.get('HPQR_SECRET')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('HPQR_DEBUG')
 
+HPQR_YANDEX_METRIKA = os.environ.get('HPQR_YANDEX_METRIKA')
+
 # Application definition
 
 INSTALLED_APPS = (
