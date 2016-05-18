@@ -32,6 +32,9 @@ def telegram_hook(request):
 
 def index(request):   
     return render(request, 'index.html')
+
+def robots(request):   
+    return render(request, 'robots.txt')
     
 def register(request):   
     return render(request, 'register.html')
@@ -75,7 +78,9 @@ def connection(request, id, pin):
             
         specific = " id=" + str(con.id) + car_id 
         show_keyboard = {'keyboard': [['1 minute'+specific,'2 minute'+specific], ['5 minute'+specific,'60 minute'+specific + ' (block spam)']]}
-        bot.sendMessage(con.telegram_id, _("Somebody calling you to your car") + car_id , reply_markup=show_keyboard)
+        bot.sendMessage(con.telegram_id, 
+                        _("Somebody calling you to your car %(car_id)s When will you come?") % {'car_id':car_id} , 
+                        reply_markup=show_keyboard)
     
     reply_message = con.message       
     reply_time = (con.wait_till - timezone.now()).seconds     
