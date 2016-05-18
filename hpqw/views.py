@@ -79,7 +79,7 @@ def connection(request, id, pin):
         specific = " id=" + str(con.id) + car_id 
         show_keyboard = {'keyboard': [['1 minute'+specific,'2 minute'+specific], ['5 minute'+specific,'60 minute'+specific + ' (block spam)']]}
         bot.sendMessage(con.telegram_id, 
-                        _("Somebody calling you to your car %(car_id)s When will you come?") % {'car_id':car_id} , 
+                        _("Somebody calling you to your car %s" % specific ) + _(". When will you come?") , 
                         reply_markup=show_keyboard)
     
     reply_message = con.message       
