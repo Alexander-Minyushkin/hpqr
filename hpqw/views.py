@@ -77,14 +77,14 @@ def connection(request, id, pin):
         con.wait_till = timezone.now() + timedelta(minutes = 1)  
         con.save()
         
-        car_id = ""
+        car_id = u""
         if con.car_id != "":
-            car_id = " [%s]." % con.car_id
+            car_id = u" [%s]." % con.car_id
             
-        specific = " id=" + str(con.id) + car_id 
+        specific = u" id=" + unicode(str(con.id)) + car_id 
         show_keyboard = {'keyboard': [['1 minute'+specific,'2 minute'+specific], ['5 minute'+specific,'60 minute'+specific + ' (block spam)']]}
         bot.sendMessage(con.telegram_id, 
-                        _("Somebody calling you to your car %s" % specific ) + _(". When will you come?") , 
+                        _("Somebody calling you to your car " ) + specific + _(". When will you come?") , 
                         reply_markup=show_keyboard)
     
     reply_message = con.message       

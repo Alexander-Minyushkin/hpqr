@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-18 23:01+0300\n"
+"POT-Creation-Date: 2016-05-19 00:03+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,7 +33,8 @@ msgstr "English"
 msgid ""
 "Hello! I am Hot Parking Bot. I can understand commands:\n"
 "\n"
-msgstr "Привет! Я Парковочный Бот. Я понимаю такие команды:\n"
+msgstr ""
+"Привет! Я Парковочный Бот. Я понимаю такие команды:\n"
 "\n"
 
 #: hpqw/bot_brain.py:29
@@ -92,19 +93,19 @@ msgstr "Извините, у вас не один код. Укажите кон�
 msgid "Will come back soon"
 msgstr "Скоро подойду."
 
-#: hpqw/views.py:54
+#: hpqw/views.py:58
 msgid "ID does not exist"
 msgstr "ID не существует"
 
-#: hpqw/views.py:58
+#: hpqw/views.py:62
 msgid "Wrong pin"
 msgstr "Неправильный пин-код"
 
-#: hpqw/views.py:83
-#, python-format
-msgid "Somebody calling you to your car %s"
-msgstr "Кто-то ожидает вас у машины %s"
+#: hpqw/views.py:87
+#| msgid "Somebody calling you to your car %s"
+msgid "Somebody calling you to your car "
+msgstr "Кто-то ожидает вас у машины "
 
-#: hpqw/views.py:83
+#: hpqw/views.py:87
 msgid ". When will you come?"
 msgstr ". Когда Вы подойдёте?"
