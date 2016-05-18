@@ -1,0 +1,2 @@
+./manage.py compilemessages
+./manage.py collectstatic --noinput
