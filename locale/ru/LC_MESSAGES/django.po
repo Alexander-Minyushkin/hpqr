@@ -1,0 +1,110 @@
+# coding: utf-8
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-18 23:01+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: hpqr/settings.py:121
+msgid "Russian"
+msgstr "Russian"
+
+#: hpqr/settings.py:122
+msgid "English"
+msgstr "English"
+
+#: hpqw/bot_brain.py:28
+msgid ""
+"Hello! I am Hot Parking Bot. I can understand commands:\n"
+"\n"
+msgstr "Привет! Я Парковочный Бот. Я понимаю такие команды:\n"
+"\n"
+
+#: hpqw/bot_brain.py:29
+msgid "/make - create QR code for your car\n"
+msgstr "/make - создать QR-код для вашей машины\n"
+
+#: hpqw/bot_brain.py:30
+msgid ""
+"/make xxx - create QR code with car plate number (incomplete is OK). It is "
+"convenient if you have several cars.\n"
+msgstr ""
+"/make xxx - создать QR-код, указав номер машины (можно не полностью). Это "
+"удобно, если у вас несколько машин.\n"
+
+#: hpqw/bot_brain.py:31
+msgid "/ls   - list all active QR-codes\n"
+msgstr "/ls   - показать все QR-коды.\n"
+
+#: hpqw/bot_brain.py:32
+msgid "/del_all - delete all codes.\n"
+msgstr "/del_all - удалить все коды.\n"
+
+#: hpqw/bot_brain.py:33
+msgid "/del id=XXX - delete code with id=XXX.\n"
+msgstr "/del id=XXX - удалить код id=XXX.\n"
+
+#: hpqw/bot_brain.py:40
+msgid "Sorry, I understand only text"
+msgstr "Извините, я понимаю только текст."
+
+#: hpqw/bot_brain.py:45
+msgid "Sorry, you have too many registred codes."
+msgstr "Извините, у вас зарегистрировано слишком много кодов."
+
+#: hpqw/bot_brain.py:50 hpqw/bot_brain.py:70
+msgid "Print your QR-code: "
+msgstr "Распечатайте свой QR-код: "
+
+#: hpqw/bot_brain.py:53
+msgid "Active QR-codes:\n"
+msgstr "Действующие QR-коды:\n"
+
+#: hpqw/bot_brain.py:77
+msgid "Sorry, I can not find this id."
+msgstr "Извините, я не могу найти этот код."
+
+#: hpqw/bot_brain.py:84 hpqw/bot_brain.py:104
+msgid "Sorry, I did not understand what you said."
+msgstr "Извините, я не понял, что вы сказали."
+
+#: hpqw/bot_brain.py:93
+msgid "Sorry, you have many codes. Provide particular id."
+msgstr "Извините, у вас не один код. Укажите конкретный id."
+
+#: hpqw/bot_brain.py:98
+msgid "Will come back soon"
+msgstr "Скоро подойду."
+
+#: hpqw/views.py:54
+msgid "ID does not exist"
+msgstr "ID не существует"
+
+#: hpqw/views.py:58
+msgid "Wrong pin"
+msgstr "Неправильный пин-код"
+
+#: hpqw/views.py:83
+#, python-format
+msgid "Somebody calling you to your car %s"
+msgstr "Кто-то ожидает вас у машины %s"
+
+#: hpqw/views.py:83
+msgid ". When will you come?"
+msgstr ". Когда Вы подойдёте?"

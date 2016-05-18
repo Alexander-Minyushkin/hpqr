@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 import dj_database_url
+from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_noop
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -113,7 +115,18 @@ AUTH_PASSWORD_VALIDATORS = (
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
+
+LANGUAGES = [
+    ('ru', gettext_noop('Russian')),
+    ('en', _('English')),
+]
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
+
+
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True

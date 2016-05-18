@@ -2,8 +2,9 @@
 from django.shortcuts import render
 
 from django.shortcuts import render
-#from django.utils.translation import ugettext_lazy as _
-def _(x): return x
+from django.utils.translation import ugettext_lazy 
+def _(x): return unicode(ugettext_lazy(x))
+#def _(x): return x
 from django.http import HttpResponse, Http404
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
@@ -38,7 +39,10 @@ def robots(request):
     return render(request, 'robots.txt')
     
 def register(request):   
-    return render(request, 'register.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
+    return render(request, 'register.html', 
+                  {'bot_help_text':brain.help_text, 
+                   'bot_getMe':bot.getMe(),
+                   'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
     
 def credits(request):   
     return render(request, 'credits.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
