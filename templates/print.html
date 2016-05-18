@@ -12,10 +12,19 @@
     <script type="text/javascript" src="/static/js/jquery.qrcode.js"></script>
     <script type="text/javascript" src="/static/js/qrcode.js"></script>
     
-    <textarea rows="4" cols="50">
+    <table>
+    <th>
+    <div id="qrcodeCanvas" align="left"></div>
+    </th>
+    <th>
+    <textarea rows="10" cols="30" style="font-size: 16pt" align="right">
 If you want me to move my car send me a message via this link {{message_link}} or use QR-code below:
-    </textarea>    
-    <div id="qrcodeCanvas"></div>
+    </textarea>   
+    </th>
+    <!--img src="qr_example.png" alt="Smiley face" align="left"-->    
+   
+    </table>
+    
     <script>	
         jQuery('#qrcodeCanvas').qrcode({
             text	: "http://{{message_link}}"
