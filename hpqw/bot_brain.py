@@ -2,7 +2,8 @@
 import telepot
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy 
-def _(x): return unicode(ugettext_lazy(x))
+#def _(x): return unicode(ugettext_lazy(x))
+def _(x): return x
 from datetime import timedelta
 from random import randint
 from hpqw.models import Connection
