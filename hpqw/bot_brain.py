@@ -36,6 +36,7 @@ help_text=(_('Hello! I am Hot Parking Bot. I can understand commands:\n\n') +
 def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ = _):
 
     content_type, chat_type, chat_id = telepot.glance(msg)
+    print "read_msg, " + str(chat_id) + ", " + str(content_type)
     if content_type != 'text':
         bot.sendMessage(chat_id, _('Sorry, I understand only text'))
         return
