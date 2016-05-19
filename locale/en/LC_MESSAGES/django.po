@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-19 18:47+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: hpqr/settings.py:121
+msgid "Russian"
+msgstr ""
+
+#: hpqr/settings.py:122
+msgid "English"
+msgstr ""
+
+#: hpqw/bot_brain.py:28
+msgid ""
+"Привет! Я Парковочный Бот. Я понимаю такие команды:\n"
+"\n"
+msgstr ""
+
+#: hpqw/bot_brain.py:29
+msgid "/make - создать QR-код для вашей машины.\n"
+msgstr ""
+
+#: hpqw/bot_brain.py:30
+msgid ""
+"/make xxx - создать QR-код, указав номер машины (можно не полностью). Это "
+"удобно, если у вас несколько машин.\n"
+msgstr ""
+
+#: hpqw/bot_brain.py:31
+msgid "/ls - показать все QR-коды.\n"
+msgstr ""
+
+#: hpqw/bot_brain.py:32
+msgid "/del id=XXX - удалить код id=XXX.\n"
+msgstr ""
+
+#: hpqw/bot_brain.py:40
+msgid "Извините, я понимаю только текст."
+msgstr ""
+
+#: hpqw/bot_brain.py:45
+msgid "Извините, у вас зарегистрировано слишком много кодов."
+msgstr ""
+
+#: hpqw/bot_brain.py:50
+msgid "Распечатайте свой QR-код: "
+msgstr ""
+
+#: hpqw/bot_brain.py:53
+msgid "Active QR-codes:\n"
+msgstr ""
+
+#: hpqw/bot_brain.py:54
+msgid " нет кодов."
+msgstr ""
+
+#: hpqw/bot_brain.py:72
+msgid "Print your QR-code: "
+msgstr ""
+
+#: hpqw/bot_brain.py:79
+msgid "Sorry, I can not find this id."
+msgstr ""
+
+#: hpqw/bot_brain.py:86 hpqw/bot_brain.py:106
+msgid "Sorry, I did not understand what you said."
+msgstr ""
+
+#: hpqw/bot_brain.py:95
+msgid "Sorry, you have many codes. Provide particular id."
+msgstr ""
+
+#: hpqw/bot_brain.py:100
+msgid "Will come back soon"
+msgstr ""
+
+#: hpqw/views.py:58
+msgid "ID does not exist"
+msgstr ""
+
+#: hpqw/views.py:62
+msgid "Wrong pin"
+msgstr ""
+
+#: hpqw/views.py:87
+msgid "Somebody calling you to your car "
+msgstr ""
+
+#: hpqw/views.py:87
+msgid ". When will you come?"
+msgstr ""
+
+#: templates/contact.html:4
+msgid "Contact us on github"
+msgstr ""
+
+#: templates/print.html:25
+msgid "If you want me to move my car send me a message via this link"
+msgstr ""
+
+#: templates/print.html:25
+msgid "or use QR-code below:"
+msgstr ""
