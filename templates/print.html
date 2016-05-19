@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load i18n %}
 <html>
 <head>
 <title>Print</title>
@@ -21,7 +22,7 @@
     </td>
     <td>
     <textarea rows="10" cols="30" style="font-size: 16pt" align="right">
-If you want me to move my car send me a message via this link {{message_link}} or use QR-code below:
+{% trans "If you want me to move my car send me a message via this link" %} {{message_link}} {% trans "or use QR-code below:" %}
     </textarea>   
     </td>
     </tr>
