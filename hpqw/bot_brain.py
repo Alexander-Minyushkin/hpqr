@@ -25,12 +25,11 @@ msg = {u'chat': {u'first_name': u'Nick',
 def get_print_link(con, host_name):
     return host_name + "/print/" + str(con.id) + "." + str(con.pin)
 
-help_text=(_('Hello! I am Hot Parking Bot. I can understand commands:\n\n') +
-           _('/make - create QR code for your car\n') +
-           _('/make xxx - create QR code with car plate number (incomplete is OK). It is convenient if you have several cars.\n') +
-           _('/ls   - list all active QR-codes\n') +
-           _('/del_all - delete all codes.\n') +
-           _('/del id=XXX - delete code with id=XXX.\n')
+help_text=(_('Привет! Я Парковочный Бот. Я понимаю такие команды:\n\n') +
+           _('/make - создать QR-код для вашей машины.\n') +
+           _('/make xxx - создать QR-код, указав номер машины (можно не полностью). Это удобно, если у вас несколько машин.\n') +
+           _('/ls - показать все QR-коды.\n') +
+           _('/del id=XXX - удалить код id=XXX.\n')
            )
 
 def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ = _):
@@ -38,24 +37,26 @@ def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ =
     content_type, chat_type, chat_id = telepot.glance(msg)
     print "read_msg, " + str(chat_id) + ", " + str(content_type)
     if content_type != 'text':
-        bot.sendMessage(chat_id, _('Sorry, I understand only text'))
+        bot.sendMessage(chat_id, _('Извините, я понимаю только текст.'))
         return
     text = msg['text']    
     if text == '/make':                 # Create new code
         if Connection.objects.filter(telegram_id=chat_id).count() >=10:
-            bot.sendMessage(chat_id, _('Sorry, you have too many registred codes.'))
+            bot.sendMessage(chat_id, _('Извините, у вас зарегистрировано слишком много кодов.'))
             return
         new_connection = Connection(pin=randint(1000, 9999), telegram_id=chat_id, wait_till = timezone.now())
         new_connection.save()
         link = get_print_link( new_connection, host_name)
-        bot.sendMessage(chat_id, _("Print your QR-code: ") + link)
+        bot.sendMessage(chat_id, _("Распечатайте свой QR-код: ") + link)
         return
     if text == '/ls':                   # List all 
         out_msg = _("Active QR-codes:\n")
+        end_of_msg = _(" нет кодов.")
         for x in Connection.objects.filter(telegram_id=chat_id):
+            end_of_msg = u""
             link = get_print_link( x, host_name)
             out_msg = out_msg + "id = " + str(x.id) + " [" + str(x.car_id) + "] " + link +"\n"
-        bot.sendMessage(chat_id, out_msg)
+        bot.sendMessage(chat_id, out_msg + end_of_msg)
         return  
     if text == '/del_all':              # Delete all codes
         num, full_list = Connection.objects.filter(telegram_id=chat_id).delete()        
