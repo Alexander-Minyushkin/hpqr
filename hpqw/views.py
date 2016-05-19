@@ -3,8 +3,8 @@ from django.shortcuts import render
 
 from django.shortcuts import render
 from django.utils.translation import ugettext_lazy 
-def _(x): return unicode(ugettext_lazy(x))
-#def _(x): return x
+#def _(x): return unicode(ugettext_lazy(x))
+def _(x): return x
 from django.http import HttpResponse, Http404
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
@@ -84,7 +84,7 @@ def connection(request, id, pin):
         specific = u" id=" + unicode(str(con.id)) + car_id 
         show_keyboard = {'keyboard': [['1 minute'+specific,'2 minute'+specific], ['5 minute'+specific,'60 minute'+specific + ' (block spam)']]}
         bot.sendMessage(con.telegram_id, 
-                        _("Somebody calling you to your car " ) + specific + _(". When will you come?") , 
+                        _("Кто-то ожидает вас у машины " ) + specific + _(". Когда вы подойдёте?") , 
                         reply_markup=show_keyboard)
     
     reply_message = con.message       
