@@ -61,7 +61,8 @@ def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ =
         return  
     if text == '/del_all':              # Delete all codes
         num, full_list = Connection.objects.filter(telegram_id=chat_id).delete()        
-        bot.sendMessage(chat_id, "Removed %d codes. There will be no more messages from them. You can /make new code." % num)
+        bot.sendMessage(chat_id, 
+                        "Удалено %d кодов. Вы больше не будете получать сообщения от них.\n/make - создаст новый код, это бесплатно." % num)
         return               
     st = text.split()
     if len(st) > 1 and st[0] == '/make': # Make QR-code with car_id
@@ -77,14 +78,15 @@ def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ =
             id_ = int(st[1].split('=')[1]) 
             all_con = Connection.objects.filter(id = id_).filter(telegram_id=chat_id)
             if all_con.count() != 1:
-                bot.sendMessage(chat_id, _('Sorry, I can not find this id.'))
+                bot.sendMessage(chat_id, _('Извините, я не могу найти этот id.'))
                 return
             else:
                 num, full_list = all_con.delete()
-                bot.sendMessage(chat_id, "Removed code with id=%d. There will be no more messages from it. You can /make new code." % id_)
+                bot.sendMessage(chat_id, 
+                               "Удалён код id=%d. Вы больше не будете получать сообщения от него.\n/make - создаст новый код, это бесплатно." % id_)
             return
         except ValueError:
-            bot.sendMessage(chat_id, _('Sorry, I did not understand what you said.'))
+            bot.sendMessage(chat_id, _('Извините, я не понял, что вы сказали.'))
             pass
     if len(st) > 1 and st[1] == 'minute': # Answer, when user is going to come back to the car.  
         try:        
@@ -93,17 +95,17 @@ def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ =
             if all_con.count() == 1:
                 con = all_con[0]                
             elif len(st) ==2 :
-                bot.sendMessage(chat_id, _('Sorry, you have many codes. Provide particular id.'))
+                bot.sendMessage(chat_id, _('Извините, у вас несколько кодов, укажите конкретный id.'))
                 return
             else: 
                 id_ = int(st[2].split('=')[1])
                 con = all_con.filter(id = id_)[0]            
-            con.message = _("Will come back soon")            
+            con.message = _("Скоро приду.")            
             con.wait_till = timezone.now() + timedelta(minutes = num)            
             con.save()            
             #bot.sendMessage(chat_id, _('I am hiding keyboard'), reply_markup={'hide_keyboard': True})
             return
         except ValueError:
-            bot.sendMessage(chat_id, _('Sorry, I did not understand what you said.'))
+            bot.sendMessage(chat_id, _('Извините, я не понял, что вы сказали.'))
             pass
     bot.sendMessage(chat_id, help_text)
