@@ -33,7 +33,8 @@ def telegram_hook(request):
     return HttpResponse('hook')
 
 def index(request):   
-    return render(request, 'index.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
+    return render(request, 'index.html', {'bot_getMe':bot.getMe(),
+                                          'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
 
 def robots(request):   
     return render(request, 'robots.txt')
