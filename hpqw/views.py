@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import render
 from django.utils.translation import ugettext_lazy 
 #def _(x): return unicode(ugettext_lazy(x))
-def _(x): return x
+def _(x): return unicode(x)
 from django.http import HttpResponse, Http404
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.gzip import gzip_page
