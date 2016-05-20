@@ -84,14 +84,14 @@ def connection(request, id, pin):
         con.wait_till = timezone.now() + timedelta(minutes = 1)  
         con.save()
         
-        car_id = u""
+        car_id = ""
         if con.car_id != "":
-            car_id = u" [%s]." % con.car_id
+            car_id = " [%s]." % con.car_id
             
-        specific = u" id=" + unicode(str(con.id)) + car_id 
-        show_keyboard = {'keyboard': [['1 minute'+specific,'2 minute'+specific], ['5 minute'+specific,'60 minute'+specific + ' (block spam)']]}
+        specific = " id=" + str(con.id) + car_id 
+        show_keyboard = {'keyboard': [[u'1 minute'+specific,u'2 minute'+specific], [u'5 minute'+specific,u'60 minute'+specific + u' (block spam)']]}
         bot.sendMessage(con.telegram_id, 
-                        _("Кто-то ожидает вас у машины " ) + specific + _(". Когда вы подойдёте?") , 
+                        "Кто-то ожидает вас у машины " + specific + ". Когда вы подойдёте?" , 
                         reply_markup=show_keyboard)
     
     reply_message = con.message       
