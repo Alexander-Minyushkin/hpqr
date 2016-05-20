@@ -93,7 +93,9 @@ HPQR_HOST = os.environ.get('HPQR_HOST')
 #print HPQR_HOST +'/' + bot_token
 try:
     hook_page = 'https://' + HPQR_HOST +'/' + bot_token
+    print "hook_page: " + hook_page
     bot.setWebhook(hook_page)
+    print "Web hook set!"
 finally:
     pass
 
