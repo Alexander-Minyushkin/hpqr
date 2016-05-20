@@ -90,9 +90,10 @@ bot_token = HPQR_BOT.split(':')[0]
 bot = telepot.Bot(HPQR_BOT)
 
 HPQR_HOST = os.environ.get('HPQR_HOST')
+HPQR_HOOK = os.environ.get('HPQR_HOOK')
 #print HPQR_HOST +'/' + bot_token
 try:
-    hook_page = 'https://' + HPQR_HOST +'/' + bot_token
+    hook_page = 'https://' + HPQR_HOOK +'/' + bot_token
     print "hook_page: " + hook_page
     bot.setWebhook(hook_page)
     print "Web hook set!"
