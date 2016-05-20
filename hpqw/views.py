@@ -71,8 +71,7 @@ def check_inputs(id, pin):
 def print_page(request, id, pin): 
     check_inputs(id, pin)
     
-    message_link = HPQR_HOST +"/" + id + "." + pin
-    message_link = "hpqr.online" +"/" + id + "." + pin
+    message_link = HPQR_HOST +"/" + id + "." + pin    
     return render(request, 'print.html', {'message_link':message_link, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
  
 @gzip_page 
