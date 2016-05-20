@@ -7,6 +7,7 @@ from django.utils.translation import ugettext_lazy
 def _(x): return x
 from django.http import HttpResponse, Http404
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.gzip import gzip_page
 from django.core.exceptions import ObjectDoesNotExist
 from django.views.decorators.http import require_http_methods
 from django.utils import timezone
@@ -31,23 +32,27 @@ def telegram_hook(request):
     finally:
         pass
     return HttpResponse('hook')
-
+    
+@gzip_page
 def index(request):   
     return render(request, 'index.html', {'bot_getMe':bot.getMe(),
                                           'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
 
 def robots(request):   
     return render(request, 'robots.txt')
-    
+
+@gzip_page    
 def register(request):   
     return render(request, 'register.html', 
                   {'bot_help_text':brain.help_text, 
                    'bot_getMe':bot.getMe(),
                    'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
-    
+ 
+@gzip_page 
 def credits(request):   
     return render(request, 'credits.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
-    
+
+@gzip_page    
 def contact(request):   
     return render(request, 'contact.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
     
@@ -69,7 +74,8 @@ def print_page(request, id, pin):
     message_link = HPQR_HOST +"/" + id + "." + pin
     message_link = "hpqr.online" +"/" + id + "." + pin
     return render(request, 'print.html', {'message_link':message_link, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
-    
+ 
+@gzip_page 
 def connection(request, id, pin):  
     check_inputs(id, pin)
     con = Connection.objects.get(id=id)
