@@ -35,8 +35,6 @@ help_text=(_('Привет! Я Парковочный Бот. Я понимаю 
 
 def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ = _):
 
-    help_text = help_text + _('\nВы можете узнать больше на странице: ' + host_name)
-
     content_type, chat_type, chat_id = telepot.glance(msg)
     print "read_msg, " + str(chat_id) + ", " + str(content_type)
     if content_type != 'text':
@@ -110,4 +108,7 @@ def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ =
         except ValueError:
             bot.sendMessage(chat_id, _('Извините, я не понял, что вы сказали.'))
             pass
-    bot.sendMessage(chat_id, help_text)
+
+    
+    bot.sendMessage(chat_id, help_text + _('\nВы можете узнать больше на странице: ' + host_name))
+
