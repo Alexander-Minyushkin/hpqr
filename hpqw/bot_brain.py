@@ -30,11 +30,12 @@ help_text=(_('Привет! Я Парковочный Бот. Я понимаю 
            _('/make - создать QR-код для вашей машины.\n') +
            _('/make xxx - создать QR-код, указав номер машины (можно не полностью). Это удобно, если у вас несколько машин.\n') +
            _('/ls - показать все QR-коды.\n') +
-           _('/del id=XXX - удалить код id=XXX.\n\n') + 
-           _('Вы можете узнать больше на странице: ' + host_name)
+           _('/del id=XXX - удалить код id=XXX.\n') 
            )
 
 def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ = _):
+
+    help_text = help_text + _('\nВы можете узнать больше на странице: ' + host_name)
 
     content_type, chat_type, chat_id = telepot.glance(msg)
     print "read_msg, " + str(chat_id) + ", " + str(content_type)
