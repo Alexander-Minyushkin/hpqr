@@ -1,15 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-        
+ 
+<table width="400">  
+<td>
+
+    <p class="lead"> Подождите {{reply_time}} секунд.</p> 
+          
     <p class="lead"> Сообщение отправлено владельцу машины.</p>
 
-    <p class="lead"> Ответ: {{reply_message}}</p>      
-    
-    <p class="lead"> Подождите {{reply_time}} секунд.</p>      
+    <p class="lead"> Его ответ: {{reply_message}}</p>      
         
     <button onclick="myFunction()" id="button" class="btn btn-default">Отправить ещё раз.</button>   
-    
+</td>
+</table>    
 
     
 <script>
