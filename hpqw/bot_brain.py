@@ -71,7 +71,7 @@ def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ =
         new_connection = Connection(pin=randint(1000, 9999), telegram_id=chat_id, wait_till = timezone.now(), car_id=car_id)
         new_connection.save()
         link = get_print_link( new_connection, host_name)
-        bot.sendMessage(chat_id, _("Print your QR-code: ") + link)
+        bot.sendMessage(chat_id, _("Распечатайте свой QR-код: ") + link)
         return 
     if len(st) > 1 and st[0] == '/del':
         try: 
