@@ -1,6 +1,5 @@
 User-agent: *
-Allow: /index
+Allow: /
 Allow: /register
 Allow: /credits
 Allow: /contact
-Disallow: /
