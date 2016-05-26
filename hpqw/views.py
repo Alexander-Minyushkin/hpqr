@@ -100,7 +100,7 @@ def connection(request, id, pin):
     return render(request, 'connection.html', 
                   {'id':id, 'pin':pin, 'reply_message':reply_message, 'reply_time':reply_time, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
   
-def handler404(request): 
+def bad_request(request): 
     response = render(request, '404.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
     response.status_code = 404
     return response

@@ -1,6 +1,7 @@
 from django.conf.urls import include, url
 from django.contrib import admin
 from hpqw import views
+from django.conf.urls import handler400
 
 from hpqr.settings import bot_token
 
@@ -20,3 +21,5 @@ urlpatterns = [
     url(r'^robots\.txt$', views.robots),
     #url(r'^admin/', include(admin.site.urls)),
 ]
+
+handler400 = 'hpqw.views.bad_request'
