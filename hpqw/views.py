@@ -95,9 +95,13 @@ def connection(request, id, pin):
                         reply_markup=show_keyboard)
     
     reply_message = con.message       
-    reply_time = (con.wait_till - timezone.now()).seconds     
+    reply_time = (con.wait_till - timezone.now()).seconds       
     #return HttpResponse("Good!: " + id + " -> " + pin)
     return render(request, 'connection.html', 
                   {'id':id, 'pin':pin, 'reply_message':reply_message, 'reply_time':reply_time, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
   
+def handler404(request): 
+    response = render(request, '404.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
+    response.status_code = 404
+    return response
 
