@@ -52,9 +52,9 @@ def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ =
         return
     if text == '/ls':                   # List all 
         out_msg = _("Действующие QR-коды:\n")
-        end_of_msg = _(" нет кодов.")
+        end_of_msg = _("нет кодов.")
         for x in Connection.objects.filter(telegram_id=chat_id):
-            end_of_msg = _(".")
+            end_of_msg = _("")
             link = get_print_link( x, host_name)
             out_msg = out_msg + "id = " + str(x.id) + " [" + str(x.car_id) + "] " + link +"\n"
         bot.sendMessage(chat_id, out_msg + end_of_msg)
