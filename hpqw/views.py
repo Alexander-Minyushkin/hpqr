@@ -36,6 +36,7 @@ def telegram_hook(request):
 @gzip_page
 def index(request):   
     return render(request, 'index.html', {'bot_getMe':bot.getMe(),
+                                          'HPQR_HOST':HPQR_HOST,
                                           'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
 
 def robots(request):   
@@ -46,15 +47,16 @@ def register(request):
     return render(request, 'register.html', 
                   {'bot_help_text':brain.help_text, 
                    'bot_getMe':bot.getMe(),
+                   'HPQR_HOST':HPQR_HOST,
                    'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
  
 @gzip_page 
 def credits(request):   
-    return render(request, 'credits.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
+    return render(request, 'credits.html', {'HPQR_HOST':HPQR_HOST, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
 
 @gzip_page    
 def contact(request):   
-    return render(request, 'contact.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
+    return render(request, 'contact.html', {'HPQR_HOST':HPQR_HOST, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
     
 def check_inputs(id, pin):
     try:
@@ -98,10 +100,10 @@ def connection(request, id, pin):
     reply_time = (con.wait_till - timezone.now()).seconds       
     #return HttpResponse("Good!: " + id + " -> " + pin)
     return render(request, 'connection.html', 
-                  {'id':id, 'pin':pin, 'reply_message':reply_message, 'reply_time':reply_time, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
+                  {'id':id, 'pin':pin, 'reply_message':reply_message, 'reply_time':reply_time, 'HPQR_HOST':HPQR_HOST, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
   
 def bad_request(request): 
-    response = render(request, '404.html', {'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
+    response = render(request, '404.html', {'HPQR_HOST':HPQR_HOST, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
     response.status_code = 404
     return response
 

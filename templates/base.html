@@ -8,10 +8,50 @@
     <link href="/static/css/mui.min.css" rel="stylesheet" type="text/css">
     <link href="/static/css/style.css" rel="stylesheet" type="text/css">
     <script src="/static/js/mui.min.js"></script>
+    
+    
+    <title>Hot Parking QR</title>
+    <meta name="description" content="Парковочный бот" />
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="Парковочный бот">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Hot Parking QR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://{{HPQR_HOST}}" />
+    <meta property="og:image" content="http://{{HPQR_HOST}}/static/img/iphone_help_screenshot_edited_small.jpg" />
+    <meta property="og:description" content="Hot Parking QR" />
+
   </head>
 
   <body>
    
+    <header class="mui-appbar mui--z1">
+      <div class="mui-container">
+        <table width="100%">
+          <tbody><tr class="mui--appbar-height">
+            <td class="mui--text-title"><a href="/">Hot Parking (QR)</a></td>
+            <td align="right">
+              <ul class="mui-list--inline mui--text-body2">
+                <li><a href="/">Главная</a></li>
+                <li><a href="register">Регистрация</a></li>
+                <li><a href="credits">Благодарности</a></li>
+                <li><a href="contact">Контакты</a></li>
+              </ul>
+            </td>
+          </tr>
+        </tbody></table>
+      </div>
+    </header>    
+
+    <div id="content-wrapper" class="mui--text-center">
+    <div class="mui--appbar-height"></div>
+      <br>
+      <br>
+            {% block content %}{% endblock %}
+    </div>
+    
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (d, w, c) {
@@ -39,32 +79,6 @@
         })(document, window, "yandex_metrika_callbacks");
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/{{HPQR_YANDEX_METRIKA}}" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-
-    
-    <header class="mui-appbar mui--z1">
-      <div class="mui-container">
-        <table width="100%">
-          <tbody><tr class="mui--appbar-height">
-            <td class="mui--text-title"><a href="/">Hot Parking (QR)</a></td>
-            <td align="right">
-              <ul class="mui-list--inline mui--text-body2">
-                <li><a href="/">Главная</a></li>
-                <li><a href="register">Регистрация</a></li>
-                <li><a href="credits">Благодарности</a></li>
-                <li><a href="contact">Контакты</a></li>
-              </ul>
-            </td>
-          </tr>
-        </tbody></table>
-      </div>
-    </header>    
-
-    <div id="content-wrapper" class="mui--text-center">
-    <div class="mui--appbar-height"></div>
-      <br>
-      <br>
-            {% block content %}{% endblock %}
-    </div>
+    <!-- /Yandex.Metrika counter -->    
   </body>
 </html>
