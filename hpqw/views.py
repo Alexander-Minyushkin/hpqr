@@ -91,7 +91,7 @@ def connection(request, id, pin):
         specific = " id=" + str(con.id) + car_id 
         show_keyboard = {'keyboard': [[u'1 minute'+specific,u'2 minute'+specific], [u'5 minute'+specific,u'60 minute'+specific + u' (block spam)']]}
         bot.sendMessage(con.telegram_id, 
-                        "Кто-то ожидает вас у машины " + specific + ". Когда вы подойдёте?" , 
+                        u"Кто-то ожидает вас у машины " + specific + u". Когда вы подойдёте?" , 
                         reply_markup=show_keyboard)
     
     reply_message = con.message       
