@@ -2,45 +2,46 @@
 
 {% block content %}
    
+<center>
 <table width="400">  
 <td>   
-<p class="text-left">
+<p class="mui--text-left">
 Вы часто даете свой номер телефона незнакомым людям?
 <br>
 А людям, которых никогда даже не видели?
 </p>
-<p class="text-left">
+<p class="mui--text-left">
 Тогда вспомните ситуацию, когда приходилось срочно припарковать машину в неудобном месте.
 </p>
-<p class="text-left">
+<p class="mui--text-left">
 Многие водители оставляют свой номер телефона для экстренной связи под лобовым стеклом.
 Но кто, как и зачем воспользуется вашим номером телефона - не известно.
 </p>
-<p class="text-left">
+<p class="mui--text-left">
 Теперь можно быть на связи, не показывая номер своего телефона!
 </p>
-<p class="text-left">
+<p class="mui--text-left">
 Для этого мы создали Telegram-бота.
 </p>
-<p class="text-left">
+<p class="mui--text-left">
 Система проста:
 <br>
 - Заходите в Telegram по ссылке <a href='http://telegram.me/{{bot_getMe.username}}'>{{bot_getMe.first_name}}</a> и пишите боту "привет".
 <br>
 - В ответ Вы получаете короткую инструкцию по работе.
 </p>
-<p class="text-left">
+<p class="mui--text-left">
 <center><img src="/static/img/iphone_help_screenshot_edited_small.jpg" alt="Hello!"></center>
 </p>
-<p class="text-left">
+<p class="mui--text-left">
 Или сразу скажите "/make" и он автоматически создаст страницу для печати QR-кода.
 <br>
 - Распечатайте страницу и оставляйте ее для связи вместо номера телефона.
 </p>
-<p class="text-left">
+<p class="mui--text-left">
 <center><img src="/static/img/car_with_qrcode_small.jpg" alt="Hello!"></center>
 </p>
-<p class="text-left">
+<p class="mui--text-left">
 <br>
 - Если человеку нужно с Вами связаться, он сканирует QR-код или переходит по текстовой ссылке на страницу браузера. 
 При этом ни кто из вас не узнает чужой номер телефона, т.к. Telegram скрывает его от всех.
@@ -60,4 +61,5 @@
 </td>   
         
 </table>
+</center>
 {% endblock %}
