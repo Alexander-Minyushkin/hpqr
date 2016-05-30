@@ -8,6 +8,13 @@
     <link href="/static/css/mui.min.css" rel="stylesheet" type="text/css">
     <link href="/static/css/style.css" rel="stylesheet" type="text/css">
     <script src="/static/js/mui.min.js"></script>
+
+<!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>
+
+<script type="text/javascript">
+  VK.init({apiId: API_ID, onlyWidgets: true});
+</script>
     
     
     <title>Hot Parking QR</title>
@@ -103,6 +110,13 @@
     <!-- /Yandex.Metrika counter -->  
 
 <center>
+
+<!-- Put this div tag to the place, where the Like block will be -->
+<div id="vk_like"></div>
+<script type="text/javascript">
+VK.Widgets.Like("vk_like", {type: "mini"});
+</script>
+
 <div
   class="fb-like"
   data-share="true"
