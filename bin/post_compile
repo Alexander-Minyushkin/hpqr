@@ -19,7 +19,7 @@ if [ ! -d $TARGET_DIR/gettext ]; then
     #GETTEXT_TARBALL=https://s3-eu-west-1.amazonaws.com/midgard-heroku/gettext.tar.gz
     #GETTEXT_TARBALL=http://ftp.gnu.org/pub/gnu/gettext/gettext-latest.tar.gz
     
-    GETTEXT_TARBALL=http://ftp.gnu.org/pub/gnu/gettext/gettext-0.15.tar.gz
+    GETTEXT_TARBALL=http://fb_wanted.s3.amazonaws.com/bp/gettext.tar.gz
 
     # tempdir="$( mktemp -t gettext_XXXX )"
     # rm -rf $tempdir
