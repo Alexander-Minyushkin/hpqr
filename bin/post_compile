@@ -1,2 +1,2 @@
-#python manage.py compilemessages
-#echo "Skip error message from compilemessage if any."
+python manage.py compilemessages
+echo "Skip error message from compilemessage if any."
