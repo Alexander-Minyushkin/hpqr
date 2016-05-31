@@ -26,10 +26,10 @@ if [ ! -d $TARGET_DIR/gettext ]; then
     rm -f tmp-gettext.tar.gz
 
     curl -s -L -o tmp-gettext.tar.gz "$GETTEXT_TARBALL"
-    if [ "$GETTEXT_CHECKSUM" != "$(openssl sha -sha256 -binary tmp-gettext.tar.gz | openssl base64)" ]; then
-        echo "Checksum DOES NOT match. Gettext will not be installed."
-        exit 1
-    fi
+    #if [ "$GETTEXT_CHECKSUM" != "$(openssl sha -sha256 -binary tmp-gettext.tar.gz | openssl base64)" ]; then
+    #    echo "Checksum DOES NOT match. Gettext will not be installed."
+    #    exit 1
+    #fi
     tar -zxvf tmp-gettext.tar.gz > /dev/null
     rm tmp-gettext.tar.gz
     popd >/dev/null
