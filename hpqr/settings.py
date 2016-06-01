@@ -99,6 +99,8 @@ try:
     print "hook_page: " + hook_page
     bot.setWebhook(hook_page)
     print "Web hook set!"
+except Exception as e:
+    print e.message
 finally:
     pass
 
@@ -127,6 +129,9 @@ LANGUAGES = [
     ('ru', gettext_noop('Russian')),
     ('en', _('English')),
 ]
+
+LANGUAGES_SET = set([x[0] for x in LANGUAGES])
+
 
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),

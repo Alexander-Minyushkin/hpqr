@@ -1,6 +1,9 @@
 from django.test import TestCase
 import hpqw.bot_brain as brain
 from hpqw.models import Connection
+from hpqr.settings import LANGUAGES_SET
+from django.utils.translation import ugettext_lazy
+from django.utils import translation
 
 # Create your tests here.
 
@@ -215,4 +218,47 @@ class BotBrainTests(TestCase):
         chat_id, msg = test_bot.result()        
         self.assertEqual('removed 5 codes' in msg.lower(), True)
         self.assertEqual(size_before, Connection.objects.all().count())
-   
+        
+    def test_lang_list(self):
+        """
+        Verify that English and Russian are in supported languages
+        """
+        
+        self.assertEqual('ru' in LANGUAGES_SET, True)
+        self.assertEqual('en' in LANGUAGES_SET, True)
+        
+    def test_lang_ru_to_en(self):
+        """
+        Verify translation from Russian to English
+        """  
+        cur_language = translation.get_language()
+        translation.activate('en')        
+        self.assertEqual( brain.test_lang_ru_to_en_msg = , "Test from Russian to English")
+        translation.activate(cur_language)
+        
+    def test_lang_ru_to_ru(self):
+        """
+        Verify translation from Russian to English
+        """     
+        cur_language = translation.get_language()
+        translation.activate('ru')        
+        self.assertEqual( brain.test_lang_ru_to_ru_msg = , "Тест с Русского на Русский")
+        translation.activate(cur_language)
+        
+    def test_lang_en_to_en(self):
+        """
+        Verify translation from English to English
+        """  
+        cur_language = translation.get_language()
+        translation.activate('en')        
+        self.assertEqual( brain.test_lang_en_to_en_msg = , "Test from English to English")
+        translation.activate(cur_language)
+        
+    def test_lang_en_to_ru(self):
+        """
+        Verify translation from English to Russian
+        """     
+        cur_language = translation.get_language()
+        translation.activate('ru')        
+        self.assertEqual( brain.test_lang_en_to_ru_msg = , "Тест с Английского на Русский")    
+        translation.activate(cur_language)        

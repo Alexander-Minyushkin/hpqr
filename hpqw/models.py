@@ -14,3 +14,8 @@ class Connection(models.Model):
 
     def __unicode__(self):              # __unicode__ on Python 2
         return str(self.id) + " pin=" + str(self.pin) +" telegram_id=" + str(self.telegram_id )
+
+        
+class Language(models.Model):
+    telegram_id	= models.IntegerField(db_index=True)
+    prefix = models.CharField(max_length=10, default='ru')
