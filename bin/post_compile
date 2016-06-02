@@ -47,3 +47,6 @@ MANAGE_FILE=${MANAGE_FILE:2}
 echo "-----> Compiling translation files"
 python "$MANAGE_FILE" compilemessages -l en 2>&1 | indent
 rm -rf .heroku/vendor/gettext/
+
+echo "-----> Make migrations"
+python "$MANAGE_FILE" makemigrations 2>&1 | indent
