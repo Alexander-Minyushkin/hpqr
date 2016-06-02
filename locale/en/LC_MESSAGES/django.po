@@ -3,13 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: .\hpqw\bot_brain.py:58
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-01 14:42+0300\n"
+"POT-Creation-Date: 2016-06-01 17:43+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,75 +25,89 @@ msgid "English"
 msgstr ""
 
 #: .\hpqw\bot_brain.py:30
-msgid ""
-"ÐÑÐ¸Ð²ÐµÑ! Ð¯ ÐÐ°ÑÐºÐ¾Ð²Ð¾ÑÐ½ÑÐ¹ ÐÐ¾Ñ. Ð¯ Ð¿Ð¾Ð½Ð¸Ð¼Ð°Ñ ÑÐ°ÐºÐ¸Ðµ ÐºÐ¾Ð¼Ð°Ð½Ð"
-"´Ñ:\n"
-"\n"
+msgid "Ð¢ÐµÑÑ Ñ Ð ÑÑÑÐºÐ¾Ð³Ð¾ Ð½Ð° ÐÐ½Ð³Ð»Ð¸Ð¹ÑÐºÐ¸Ð¹"
 msgstr ""
 
 #: .\hpqw\bot_brain.py:31
-msgid "/make - ÑÐ¾Ð·Ð´Ð°ÑÑ QR-ÐºÐ¾Ð´ Ð´Ð»Ñ Ð²Ð°ÑÐµÐ¹ Ð¼Ð°ÑÐ¸Ð½Ñ.\n"
+msgid "Ð¢ÐµÑÑ Ñ Ð ÑÑÑÐºÐ¾Ð³Ð¾ Ð½Ð° Ð ÑÑÑÐºÐ¸Ð¹"
 msgstr ""
 
 #: .\hpqw\bot_brain.py:32
-msgid ""
-"/make xxx - ÑÐ¾Ð·Ð´Ð°ÑÑ QR-ÐºÐ¾Ð´, ÑÐºÐ°Ð·Ð°Ð² Ð½Ð¾Ð¼ÐµÑ Ð¼Ð°ÑÐ¸Ð½Ñ "
-"(Ð¼Ð¾Ð¶Ð½Ð¾ Ð½Ðµ Ð¿Ð¾Ð»Ð½Ð¾ÑÑÑÑ). Ð­ÑÐ¾ ÑÐ´Ð¾Ð±Ð½Ð¾, ÐµÑÐ»Ð¸ Ñ Ð²Ð°Ñ "
-"Ð½ÐµÑÐºÐ¾Ð»ÑÐºÐ¾ Ð¼Ð°ÑÐ¸Ð½.\n"
+msgid "Test from English to English"
 msgstr ""
 
 #: .\hpqw\bot_brain.py:33
-msgid "/ls - Ð¿Ð¾ÐºÐ°Ð·Ð°ÑÑ Ð²ÑÐµ QR-ÐºÐ¾Ð´Ñ.\n"
+msgid "Test from English to Russian"
 msgstr ""
 
-#: .\hpqw\bot_brain.py:34
-msgid "/del id=XXX - ÑÐ´Ð°Ð»Ð¸ÑÑ ÐºÐ¾Ð´ id=XXX.\n"
+#: .\hpqw\bot_brain.py:35
+msgid ""
+"Hello! I am Hot Parking Bot. I understand commands:\n"
+"\n"
 msgstr ""
 
-#: .\hpqw\bot_brain.py:42
-msgid "ÐÐ·Ð²Ð¸Ð½Ð¸ÑÐµ, Ñ Ð¿Ð¾Ð½Ð¸Ð¼Ð°Ñ ÑÐ¾Ð»ÑÐºÐ¾ ÑÐµÐºÑÑ."
+#: .\hpqw\bot_brain.py:36
+msgid "/make - create QR-code for your car.\n"
+msgstr ""
+
+#: .\hpqw\bot_brain.py:37
+msgid ""
+"/make xxx - create QR code with car plate number (incomplete is OK). It is "
+"convenient if you have several cars.\n"
+msgstr ""
+
+#: .\hpqw\bot_brain.py:38
+msgid "/ls - list all active QR-codes.\n"
+msgstr ""
+
+#: .\hpqw\bot_brain.py:39
+msgid "/del id=XXX - delete code with id=XXX.\n"
 msgstr ""
 
 #: .\hpqw\bot_brain.py:47
-msgid ""
-"ÐÐ·Ð²Ð¸Ð½Ð¸ÑÐµ, Ñ Ð²Ð°Ñ Ð·Ð°ÑÐµÐ³Ð¸ÑÑÑÐ¸ÑÐ¾Ð²Ð°Ð½Ð¾ ÑÐ»Ð¸ÑÐºÐ¾Ð¼ Ð¼Ð½Ð¾Ð³Ð¾ "
-"ÐºÐ¾Ð´Ð¾Ð²."
+msgid "Sorry, I understand only text."
 msgstr ""
 
-#: .\hpqw\bot_brain.py:52 .\hpqw\bot_brain.py:75
-msgid "Ð Ð°ÑÐ¿ÐµÑÐ°ÑÐ°Ð¹ÑÐµ ÑÐ²Ð¾Ð¹ QR-ÐºÐ¾Ð´: "
+#: .\hpqw\bot_brain.py:52
+msgid "Sorry, you have too many registred codes."
 msgstr ""
 
-#: .\hpqw\bot_brain.py:55
-msgid "ÐÐµÐ¹ÑÑÐ²ÑÑÑÐ¸Ðµ QR-ÐºÐ¾Ð´Ñ:\n"
+#: .\hpqw\bot_brain.py:57 .\hpqw\bot_brain.py:80
+msgid "Print your QR-code: "
 msgstr ""
 
-#: .\hpqw\bot_brain.py:56
-msgid "Ð½ÐµÑ ÐºÐ¾Ð´Ð¾Ð²."
+#: .\hpqw\bot_brain.py:60
+msgid "Active QR-codes:\n"
 msgstr ""
 
-#: .\hpqw\bot_brain.py:82
-msgid "ÐÐ·Ð²Ð¸Ð½Ð¸ÑÐµ, Ñ Ð½Ðµ Ð¼Ð¾Ð³Ñ Ð½Ð°Ð¹ÑÐ¸ ÑÑÐ¾Ñ id."
+#: .\hpqw\bot_brain.py:61
+msgid "no codes."
 msgstr ""
 
-#: .\hpqw\bot_brain.py:90 .\hpqw\bot_brain.py:110
-msgid "ÐÐ·Ð²Ð¸Ð½Ð¸ÑÐµ, Ñ Ð½Ðµ Ð¿Ð¾Ð½ÑÐ», ÑÑÐ¾ Ð²Ñ ÑÐºÐ°Ð·Ð°Ð»Ð¸."
+#: .\hpqw\bot_brain.py:63
+msgid " "
 msgstr ""
 
-#: .\hpqw\bot_brain.py:99
-msgid ""
-"ÐÐ·Ð²Ð¸Ð½Ð¸ÑÐµ, Ñ Ð²Ð°Ñ Ð½ÐµÑÐºÐ¾Ð»ÑÐºÐ¾ ÐºÐ¾Ð´Ð¾Ð², ÑÐºÐ°Ð¶Ð¸ÑÐµ "
-"ÐºÐ¾Ð½ÐºÑÐµÑÐ½ÑÐ¹ id."
+#: .\hpqw\bot_brain.py:87
+msgid "Sorry, I can not find this id."
+msgstr ""
+
+#: .\hpqw\bot_brain.py:95 .\hpqw\bot_brain.py:115
+msgid "Sorry, I did not understand what you said."
 msgstr ""
 
 #: .\hpqw\bot_brain.py:104
-msgid "Ð¡ÐºÐ¾ÑÐ¾ Ð¿ÑÐ¸Ð´Ñ."
+msgid "Sorry, you have many codes. Provide particular id."
 msgstr ""
 
-#: .\hpqw\bot_brain.py:114
+#: .\hpqw\bot_brain.py:109
+msgid "Will come back soon."
+msgstr ""
+
+#: .\hpqw\bot_brain.py:119
 msgid ""
 "\n"
-"ÐÑ Ð¼Ð¾Ð¶ÐµÑÐµ ÑÐ·Ð½Ð°ÑÑ Ð±Ð¾Ð»ÑÑÐµ Ð½Ð° ÑÑÑÐ°Ð½Ð¸ÑÐµ: "
+"You can read more here: "
 msgstr ""
 
 #: .\hpqw\views.py:66

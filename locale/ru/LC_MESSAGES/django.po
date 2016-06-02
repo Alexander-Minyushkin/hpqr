@@ -54,7 +54,7 @@ msgstr "/ls - показать все QR-коды.\n"
 
 #: .\hpqw\bot_brain.py:34
 msgid "/del id=XXX - delete code with id=XXX.\n"
-msgstr "/del id=XXX - удалить код id=XXX."
+msgstr "/del id=XXX - удалить код id=XXX.\n"
 
 #: .\hpqw\bot_brain.py:42
 msgid "Sorry, I understand only text."
