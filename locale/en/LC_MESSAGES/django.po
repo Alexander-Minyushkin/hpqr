@@ -49,7 +49,7 @@ msgstr ""
 
 #: hpqw/bot_brain.py:38
 msgid "/lang_en - for English.\n"
-msgstr ""
+msgstr "/lang_ru - перейти на Русский.\n"
 
 #: hpqw/bot_brain.py:39
 msgid "/make - create QR-code for your car.\n"

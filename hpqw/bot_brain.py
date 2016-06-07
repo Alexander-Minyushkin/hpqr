@@ -55,8 +55,15 @@ def get_user_lang(chat_id):
     return 'ru'
     
 def set_user_lang(chat_id, lang):
-    obj, created = Language.objects.update_or_create(telegram_id=chat_id, prefix = lang)
-    pass
+    x = Language.objects.filter(telegram_id=chat_id)
+    if (len(x) == 1):
+        x[0].prefix = lang
+        x[0].save() 
+        return
+        
+    if (len(x) == 0):
+        new_lang = Language(telegram_id=chat_id, prefix = lang)
+        new_lang.save()    
 
 def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ = _):
 
