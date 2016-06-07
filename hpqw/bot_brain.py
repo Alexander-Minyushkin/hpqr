@@ -34,7 +34,8 @@ test_lang_ru_to_ru_msg = _(u"Тест с Русского на Русский")
 test_lang_en_to_en_msg = _(u"Test from English to English")
 test_lang_en_to_ru_msg = _(u"Test from English to Russian")
 
-help_text=(_('Hello! I am Hot Parking Bot. I understand commands:\n\n') +
+def get_help_text():
+    return (_('Hello! I am Hot Parking Bot. I understand commands:\n\n') +
            _('/lang_en - for English.\n') +
            _('/make - create QR-code for your car.\n') +
            _('/make xxx - create QR code with car plate number (incomplete is OK). It is convenient if you have several cars.\n') +
@@ -55,7 +56,7 @@ def set_user_lang(chat_id, lang):
 def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ = _):
 
     content_type, chat_type, chat_id = telepot.glance(msg)
-    print "read_msg, " + str(chat_id) + ", " + str(content_type)
+    print "read_msg, " + str(chat_id) + ", " + str(content_type) + ", " + get_user_lang(chat_id)
     
     translation.activate(get_user_lang(chat_id))
     
@@ -143,5 +144,5 @@ def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ =
             pass
 
     
-    bot.sendMessage(chat_id, help_text + _('\nYou can read more here: ' + host_name))
+    bot.sendMessage(chat_id, get_help_text() + _('\nYou can read more here: ' + host_name))
 

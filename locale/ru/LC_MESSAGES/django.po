@@ -82,11 +82,11 @@ msgstr "Извините, я понимаю только текст."
 
 #: hpqw/bot_brain.py:69
 msgid "Sorry, we don't support this language."
-msgstr ""
+msgstr "Извините, мы пока не поддерживаем этот язык."
 
 #: hpqw/bot_brain.py:74
 msgid "Now it's better."
-msgstr ""
+msgstr "Так лучше."
 
 #: hpqw/bot_brain.py:79
 msgid "Sorry, you have too many registred codes."
@@ -106,7 +106,7 @@ msgstr "нет кодов."
 
 #: hpqw/bot_brain.py:90
 msgid " "
-msgstr ""
+msgstr " "
 
 #: hpqw/bot_brain.py:114
 msgid "Sorry, I can not find this id."
