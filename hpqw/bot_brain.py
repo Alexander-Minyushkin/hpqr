@@ -1,8 +1,8 @@
 # coding: utf-8
 import telepot
 from django.utils import timezone
-from django.utils.translation import ugettext_lazy 
-def _(x): return unicode(ugettext_lazy(x))
+from django.utils.translation import ugettext_lazy, ugettext
+def _(x): return unicode(ugettext(x))
 from django.utils import translation
 #def _(x): return ugettext_lazy(x)
 #def _(x): return x
