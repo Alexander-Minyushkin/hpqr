@@ -2,9 +2,10 @@
 from django.shortcuts import render
 
 from django.shortcuts import render
-from django.utils.translation import ugettext_lazy 
-#def _(x): return unicode(ugettext_lazy(x))
-def _(x): return unicode(x)
+from django.utils.translation import ugettext, ugettext_lazy 
+def _(x): return unicode(ugettext(x))
+#def _(x): return unicode(x)
+from django.utils import translation
 from django.http import HttpResponse, Http404
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.gzip import gzip_page
@@ -80,21 +81,27 @@ def print_page(request, id, pin):
 def connection(request, id, pin):  
     check_inputs(id, pin)
     con = Connection.objects.get(id=id)
-    
-    if timezone.now() > con.wait_till: # This is small spam protection
-        con.message = ""
-        con.wait_till = timezone.now() + timedelta(minutes = 1)  
-        con.save()
         
-        car_id = ""
-        if con.car_id != "":
-            car_id = " [%s]." % con.car_id
+    if timezone.now() > con.wait_till: # This is small spam protection
+        cur_language = translation.get_language()
+        try:
+            translation.activate(brain.get_user_lang(con.telegram_id)) # Optimization is possible using join
+
+            con.message = ""
+            con.wait_till = timezone.now() + timedelta(minutes = 1)  
+            con.save()
+        
+            car_id = u""
+            if con.car_id != u"":
+                car_id = u" [%s]." % con.car_id
             
-        specific = " id=" + str(con.id) + car_id 
-        show_keyboard = {'keyboard': [[u'1 minute'+specific,u'2 minute'+specific], [u'5 minute'+specific,u'60 minute'+specific + u' (block spam)']]}
-        bot.sendMessage(con.telegram_id, 
-                        u"Кто-то ожидает вас у машины " + specific + u". Когда вы подойдёте?" , 
+            specific = u" id=" + unicode(str(con.id)) + car_id 
+            show_keyboard = {'keyboard': [[u'1 minute'+specific,u'2 minute'+specific], [u'5 minute'+specific,u'60 minute'+specific + u' (block spam)']]}
+            bot.sendMessage(con.telegram_id, 
+                        _(u"Кто-то ожидает вас у машины ") + specific + _(u". Когда вы подойдёте?") , 
                         reply_markup=show_keyboard)
+        finally:
+            translation.activate(cur_language)
     
     reply_message = con.message       
     reply_time = (con.wait_till - timezone.now()).seconds       

@@ -1,3 +1,4 @@
+# coding: utf-8
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
@@ -8,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 09:21+0300\n"
+"POT-Creation-Date: 2016-06-07 19:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,11 +18,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: hpqr/settings.py:129
+#: hpqr/settings.py:130
 msgid "Russian"
 msgstr "Русский"
 
-#: hpqr/settings.py:130
+#: hpqr/settings.py:131
 msgid "English"
 msgstr "English"
 
@@ -41,115 +42,123 @@ msgstr "Test from English to English"
 msgid "Test from English to Russian"
 msgstr ""
 
-#: hpqw/bot_brain.py:37
+#: hpqw/bot_brain.py:38
 msgid ""
 "Hello! I am Hot Parking Bot. I understand commands:\n"
 "\n"
 msgstr ""
 
-#: hpqw/bot_brain.py:38
+#: hpqw/bot_brain.py:39
 msgid "/lang_en - for English.\n"
 msgstr "/lang_ru - перейти на Русский.\n"
 
-#: hpqw/bot_brain.py:39
+#: hpqw/bot_brain.py:40
 msgid "/make - create QR-code for your car.\n"
 msgstr ""
 
-#: hpqw/bot_brain.py:40
+#: hpqw/bot_brain.py:41
 msgid ""
 "/make xxx - create QR code with car plate number (incomplete is OK). It is "
 "convenient if you have several cars.\n"
 msgstr ""
 
-#: hpqw/bot_brain.py:41
+#: hpqw/bot_brain.py:42
 msgid "/ls - list all active QR-codes.\n"
 msgstr ""
 
-#: hpqw/bot_brain.py:42
+#: hpqw/bot_brain.py:43
 msgid "/del id=XXX - delete code with id=XXX.\n"
 msgstr ""
 
-#: hpqw/bot_brain.py:63
+#: hpqw/bot_brain.py:76
 msgid "Sorry, I understand only text."
 msgstr ""
 
-#: hpqw/bot_brain.py:69
+#: hpqw/bot_brain.py:82
 msgid "Sorry, we don't support this language."
 msgstr ""
 
-#: hpqw/bot_brain.py:74
+#: hpqw/bot_brain.py:87
 msgid "Now it's better."
 msgstr ""
 
-#: hpqw/bot_brain.py:79
+#: hpqw/bot_brain.py:92
 msgid "Sorry, you have too many registred codes."
 msgstr ""
 
-#: hpqw/bot_brain.py:84 hpqw/bot_brain.py:107
+#: hpqw/bot_brain.py:97 hpqw/bot_brain.py:120
 msgid "Print your QR-code: "
 msgstr ""
 
-#: hpqw/bot_brain.py:87
+#: hpqw/bot_brain.py:100
 msgid "Active QR-codes:\n"
 msgstr ""
 
-#: hpqw/bot_brain.py:88
+#: hpqw/bot_brain.py:101
 msgid "no codes."
 msgstr ""
 
-#: hpqw/bot_brain.py:90
+#: hpqw/bot_brain.py:103
 msgid " "
 msgstr ""
 
-#: hpqw/bot_brain.py:114
+#: hpqw/bot_brain.py:127
 msgid "Sorry, I can not find this id."
 msgstr ""
 
-#: hpqw/bot_brain.py:122 hpqw/bot_brain.py:142
+#: hpqw/bot_brain.py:135 hpqw/bot_brain.py:155
 msgid "Sorry, I did not understand what you said."
 msgstr ""
 
-#: hpqw/bot_brain.py:131
+#: hpqw/bot_brain.py:144
 msgid "Sorry, you have many codes. Provide particular id."
 msgstr ""
 
-#: hpqw/bot_brain.py:136
+#: hpqw/bot_brain.py:149
 msgid "Will come back soon."
 msgstr ""
 
-#: hpqw/bot_brain.py:146
+#: hpqw/bot_brain.py:159
 msgid ""
 "\n"
 "You can read more here: "
 msgstr ""
 
-#: hpqw/views.py:66
+#: hpqw/views.py:67
 msgid "ID does not exist"
 msgstr ""
 
-#: hpqw/views.py:70
+#: hpqw/views.py:71
 msgid "Wrong pin"
 msgstr ""
 
-#: templates/base.html:18 templates/base.html.py:21
+#: hpqw/views.py:101
+msgid "Кто-то ожидает вас у машины "
+msgstr "Someone awaits you at the car "
+
+#: hpqw/views.py:101
+msgid ". Когда вы подойдёте?"
+msgstr ". When will you come?"
+
+#: templates/base.html:18 templates/base.html:21
 msgid "Парковочный бот"
 msgstr "Parking bot"
 
-#: templates/base.html:29 templates/index.html.py:10
+#: templates/base.html:29 templates/index.html:10
 msgid "Вы часто даете свой номер телефона незнакомым людям?"
 msgstr "You often give their phone number to strangers?"
 
-#: templates/base.html:30 templates/index.html.py:12
+#: templates/base.html:30 templates/index.html:12
 msgid "А людям, которых никогда даже не видели?"
 msgstr "And people who have never even seen?"
 
-#: templates/base.html:31 templates/index.html.py:15
+#: templates/base.html:31 templates/index.html:15
 msgid ""
 "Тогда вспомните ситуацию, когда приходилось срочно припарковать машину в "
 "неудобном месте."
 msgstr ""
-"Then think of a situation when you had to park your car in the "
-"inconvenient place."
+"Then think of a situation when you had to park your car in the inconvenient "
+"place."
 
 #: templates/base.html:62
 msgid "Главная"
@@ -199,7 +208,9 @@ msgstr "here"
 msgid ""
 "Многие водители оставляют свой номер телефона для экстренной связи под "
 "лобовым стеклом."
-msgstr "Many drivers leave your phone number for emergency contact under the windshield."
+msgstr ""
+"Many drivers leave your phone number for emergency contact under the "
+"windshield."
 
 #: templates/index.html:19
 msgid "Но кто, как и зачем воспользуется вашим номером телефона - не известно."
@@ -225,47 +236,62 @@ msgstr "- Open Telegram chat with bot using link"
 msgid " и пишите боту \"привет\"."
 msgstr " and say \"Hello\""
 
+#: templates/index.html:32
+msgid "- В ответ Вы получаете короткую инструкцию по работе."
+msgstr ""
+
 #: templates/index.html:38
 msgid ""
 "Или сразу скажите \"/make\" и он автоматически создаст страницу для печати "
 "QR-кода."
-msgstr "Or just send \"/make\" command and it will create page for QR-code printing."
+msgstr ""
+"Or just send \"/make\" command and it will create page for QR-code printing."
 
 #: templates/index.html:40
 msgid ""
 "- Распечатайте страницу и оставляйте ее для связи вместо номера телефона."
-msgstr "- Print the page and leave it for communication instead of a phone number."
+msgstr ""
+"- Print the page and leave it for communication instead of a phone number."
 
 #: templates/index.html:47
 msgid ""
 "- Если человеку нужно с Вами связаться, он сканирует QR-код или переходит по "
 "текстовой ссылке на страницу браузера."
-msgstr "If a person needs to contact you, it scans the QR-code, or use a text link on the browser"
+msgstr ""
+"If a person needs to contact you, it scans the QR-code, or use a text link "
+"on the browser"
 
 #: templates/index.html:48
 msgid ""
 "При этом ни кто из вас не узнает чужой номер телефона, т.к. Telegram "
 "скрывает его от всех."
-msgstr "At the same time none of you will know a foreign phone number, because Telegram hides it from everyone."
+msgstr ""
+"At the same time none of you will know a foreign phone number, because "
+"Telegram hides it from everyone."
 
 #: templates/index.html:51
 msgid ""
 "- После этого Вы сразу получаете сообщение в Telegram с текстом \"Кто-то "
 "ожидает Вас у машины. Когда Вы подойдете?\""
-msgstr "After that, you will immediately receive a message in the Telegram with the text \"Someone awaits you at the car. When will you come?\" "
+msgstr ""
+"After that, you will immediately receive a message in the Telegram with the "
+"text \"Someone awaits you at the car. When will you come?\" "
 
 #: templates/index.html:54
 msgid ""
 "- Вы можете ответить выбрав предложенные варианты на виртуальной клавиатуре "
 "или набрав свой вариант вручную."
-msgstr "You can answer by selecting the proposed options on the virtual keyboard "
-"or by typing its version manually."
+msgstr ""
+"You can answer by selecting the proposed options on the virtual keyboard or "
+"by typing its version manually."
 
 #: templates/index.html:57
 msgid ""
 "- Если кто-то решил подшутить и продолжает слать сообщения, Вы можете на "
 "время заблокировать активность по этому коду либо удалить его полностью. "
-msgstr "If someone decided to play a trick and continues to send messages, you can temporarily block the activity of this code, or remove it completely."
+msgstr ""
+"If someone decided to play a trick and continues to send messages, you can "
+"temporarily block the activity of this code, or remove it completely."
 
 #: templates/index.html:58
 msgid "После этого Вы сможете создать новый QR-код, это абсолютно бесплатно."
@@ -275,19 +301,25 @@ msgstr "Then you can create your own QR-code, it is absolutely free."
 msgid ""
 "- Вы можете создавать и одновременно использовать до 10 QR-кодов, дав им "
 "разные имена. "
-msgstr "You can create and simultaneously use up to 10 of QR-codes, giving them different names"
+msgstr ""
+"You can create and simultaneously use up to 10 of QR-codes, giving them "
+"different names"
 
 #: templates/index.html:62
 msgid ""
 "Количество создаваемых кодов за историю пользования приложением не "
 "ограничено."
-msgstr "Number created in the history of use of the code the application is not limited."
+msgstr ""
+"Number created in the history of use of the code the application is not "
+"limited."
 
 #: templates/index.html:65
 msgid ""
 "- При необходимости можно запросить у бота список всех зарегистрированных на "
 "Ваш номер телефона QR-кодов."
-msgstr "If necessary, you can ask the bot list of all registered your phone number of QR-codes."
+msgstr ""
+"If necessary, you can ask the bot list of all registered your phone number "
+"of QR-codes."
 
 #: templates/print.html:25
 msgid "Если моя машина Вам мешает, перейдите по ссылке"

@@ -1,3 +1,4 @@
+# coding: utf-8
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
@@ -8,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 09:21+0300\n"
+"POT-Creation-Date: 2016-06-07 19:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,11 +21,11 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: hpqr/settings.py:129
+#: hpqr/settings.py:130
 msgid "Russian"
 msgstr ""
 
-#: hpqr/settings.py:130
+#: hpqr/settings.py:131
 msgid "English"
 msgstr ""
 
@@ -44,7 +45,7 @@ msgstr ""
 msgid "Test from English to Russian"
 msgstr "Тест с Английского на Русский"
 
-#: hpqw/bot_brain.py:37
+#: hpqw/bot_brain.py:38
 msgid ""
 "Hello! I am Hot Parking Bot. I understand commands:\n"
 "\n"
@@ -52,15 +53,15 @@ msgstr ""
 "Привет! Я Парковочный Бот. Я понимаю такие команды:\n"
 "\n"
 
-#: hpqw/bot_brain.py:38
+#: hpqw/bot_brain.py:39
 msgid "/lang_en - for English.\n"
 msgstr ""
 
-#: hpqw/bot_brain.py:39
+#: hpqw/bot_brain.py:40
 msgid "/make - create QR-code for your car.\n"
 msgstr "/make - создать QR-код для вашей машины.\n"
 
-#: hpqw/bot_brain.py:40
+#: hpqw/bot_brain.py:41
 msgid ""
 "/make xxx - create QR code with car plate number (incomplete is OK). It is "
 "convenient if you have several cars.\n"
@@ -68,63 +69,63 @@ msgstr ""
 "/make xxx - создать QR-код, указав номер машины (можно не полностью). Это  "
 "удобно, если у вас несколько машин.\n"
 
-#: hpqw/bot_brain.py:41
+#: hpqw/bot_brain.py:42
 msgid "/ls - list all active QR-codes.\n"
 msgstr "/ls - показать все QR-коды.\n"
 
-#: hpqw/bot_brain.py:42
+#: hpqw/bot_brain.py:43
 msgid "/del id=XXX - delete code with id=XXX.\n"
 msgstr "/del id=XXX - удалить код id=XXX.\n"
 
-#: hpqw/bot_brain.py:63
+#: hpqw/bot_brain.py:76
 msgid "Sorry, I understand only text."
 msgstr "Извините, я понимаю только текст."
 
-#: hpqw/bot_brain.py:69
+#: hpqw/bot_brain.py:82
 msgid "Sorry, we don't support this language."
 msgstr "Извините, мы пока не поддерживаем этот язык."
 
-#: hpqw/bot_brain.py:74
+#: hpqw/bot_brain.py:87
 msgid "Now it's better."
 msgstr "Так лучше."
 
-#: hpqw/bot_brain.py:79
+#: hpqw/bot_brain.py:92
 msgid "Sorry, you have too many registred codes."
 msgstr "Извините, у вас зарегистрировано слишком много кодов."
 
-#: hpqw/bot_brain.py:84 hpqw/bot_brain.py:107
+#: hpqw/bot_brain.py:97 hpqw/bot_brain.py:120
 msgid "Print your QR-code: "
 msgstr "Распечатайте свой QR-код: "
 
-#: hpqw/bot_brain.py:87
+#: hpqw/bot_brain.py:100
 msgid "Active QR-codes:\n"
 msgstr "Действующие QR-коды:\n"
 
-#: hpqw/bot_brain.py:88
+#: hpqw/bot_brain.py:101
 msgid "no codes."
 msgstr "нет кодов."
 
-#: hpqw/bot_brain.py:90
+#: hpqw/bot_brain.py:103
 msgid " "
 msgstr " "
 
-#: hpqw/bot_brain.py:114
+#: hpqw/bot_brain.py:127
 msgid "Sorry, I can not find this id."
 msgstr "Извините, я не могу найти этот id."
 
-#: hpqw/bot_brain.py:122 hpqw/bot_brain.py:142
+#: hpqw/bot_brain.py:135 hpqw/bot_brain.py:155
 msgid "Sorry, I did not understand what you said."
 msgstr "Извините, я не понял, что вы сказали."
 
-#: hpqw/bot_brain.py:131
+#: hpqw/bot_brain.py:144
 msgid "Sorry, you have many codes. Provide particular id."
 msgstr "Извините, у вас несколько кодов, укажите конкретный id."
 
-#: hpqw/bot_brain.py:136
+#: hpqw/bot_brain.py:149
 msgid "Will come back soon."
 msgstr "Скоро приду."
 
-#: hpqw/bot_brain.py:146
+#: hpqw/bot_brain.py:159
 msgid ""
 "\n"
 "You can read more here: "
@@ -132,27 +133,35 @@ msgstr ""
 "\n"
 "Вы можете узнать больше на странице: "
 
-#: hpqw/views.py:66
+#: hpqw/views.py:67
 msgid "ID does not exist"
 msgstr "ID не существует"
 
-#: hpqw/views.py:70
+#: hpqw/views.py:71
 msgid "Wrong pin"
 msgstr "Неправильный пин-код"
 
-#: templates/base.html:18 templates/base.html.py:21
+#: hpqw/views.py:101
+msgid "Кто-то ожидает вас у машины "
+msgstr ""
+
+#: hpqw/views.py:101
+msgid ". Когда вы подойдёте?"
+msgstr ""
+
+#: templates/base.html:18 templates/base.html:21
 msgid "Парковочный бот"
 msgstr ""
 
-#: templates/base.html:29 templates/index.html.py:10
+#: templates/base.html:29 templates/index.html:10
 msgid "Вы часто даете свой номер телефона незнакомым людям?"
 msgstr ""
 
-#: templates/base.html:30 templates/index.html.py:12
+#: templates/base.html:30 templates/index.html:12
 msgid "А людям, которых никогда даже не видели?"
 msgstr ""
 
-#: templates/base.html:31 templates/index.html.py:15
+#: templates/base.html:31 templates/index.html:15
 msgid ""
 "Тогда вспомните ситуацию, когда приходилось срочно припарковать машину в "
 "неудобном месте."
@@ -230,6 +239,10 @@ msgstr ""
 
 #: templates/index.html:30
 msgid " и пишите боту \"привет\"."
+msgstr ""
+
+#: templates/index.html:32
+msgid "- В ответ Вы получаете короткую инструкцию по работе."
 msgstr ""
 
 #: templates/index.html:38
