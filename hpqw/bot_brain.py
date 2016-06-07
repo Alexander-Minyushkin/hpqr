@@ -49,6 +49,9 @@ def get_user_lang(chat_id):
     print 'get_user_lang :' + str(len(x) )
     if (len(x) == 1):
         return x[0].prefix        
+    if (len(x) > 1):
+        Language.objects.filter(telegram_id=chat_id).delete()    
+        print 'get_user_lang : deleted extended Language records'
     return 'ru'
     
 def set_user_lang(chat_id, lang):
