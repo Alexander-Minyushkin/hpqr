@@ -19,15 +19,15 @@ msgstr ""
 
 #: hpqr/settings.py:129
 msgid "Russian"
-msgstr ""
+msgstr "Русский"
 
 #: hpqr/settings.py:130
 msgid "English"
-msgstr ""
+msgstr "English"
 
 #: hpqw/bot_brain.py:32
 msgid "Тест с Русского на Английский"
-msgstr ""
+msgstr "Test from Russian to English"
 
 #: hpqw/bot_brain.py:33
 msgid "Тест с Русского на Русский"
@@ -35,7 +35,7 @@ msgstr ""
 
 #: hpqw/bot_brain.py:34
 msgid "Test from English to English"
-msgstr ""
+msgstr "Test from English to English"
 
 #: hpqw/bot_brain.py:35
 msgid "Test from English to Russian"
@@ -133,172 +133,175 @@ msgstr ""
 
 #: templates/base.html:18 templates/base.html.py:21
 msgid "Парковочный бот"
-msgstr ""
+msgstr "Parking bot"
 
 #: templates/base.html:29 templates/index.html.py:10
 msgid "Вы часто даете свой номер телефона незнакомым людям?"
-msgstr ""
+msgstr "You often give their phone number to strangers?"
 
 #: templates/base.html:30 templates/index.html.py:12
 msgid "А людям, которых никогда даже не видели?"
-msgstr ""
+msgstr "And people who have never even seen?"
 
 #: templates/base.html:31 templates/index.html.py:15
 msgid ""
 "Тогда вспомните ситуацию, когда приходилось срочно припарковать машину в "
 "неудобном месте."
 msgstr ""
+"Then think of a situation when you had to park your car in the "
+"inconvenient place."
 
 #: templates/base.html:62
 msgid "Главная"
-msgstr ""
+msgstr "Home"
 
 #: templates/base.html:63
 msgid "Регистрация"
-msgstr ""
+msgstr "Register"
 
 #: templates/base.html:64
 msgid "Благодарности"
-msgstr ""
+msgstr "Credits"
 
 #: templates/base.html:65
 msgid "Контакты"
-msgstr ""
+msgstr "Contact"
 
 #: templates/connection.html:10
 msgid "Подождите"
-msgstr ""
+msgstr "Wait for"
 
 #: templates/connection.html:10
 msgid "секунд."
-msgstr ""
+msgstr "seconds."
 
 #: templates/connection.html:12
 msgid "Сообщение отправлено владельцу машины."
-msgstr ""
+msgstr "The message sent to the car owner."
 
 #: templates/connection.html:14
 msgid "Его ответ:"
-msgstr ""
+msgstr "His answer:"
 
 #: templates/connection.html:16
 msgid "Отправить ещё раз."
-msgstr ""
+msgstr "Send once again."
 
 #: templates/contact.html:5
 msgid "Жалобы и предложения принимаются"
-msgstr ""
+msgstr "Complaints and suggestions are accepted"
 
 #: templates/contact.html:5
 msgid "здесь"
-msgstr ""
+msgstr "here"
 
 #: templates/index.html:18
 msgid ""
 "Многие водители оставляют свой номер телефона для экстренной связи под "
 "лобовым стеклом."
-msgstr ""
+msgstr "Many drivers leave your phone number for emergency contact under the windshield."
 
 #: templates/index.html:19
 msgid "Но кто, как и зачем воспользуется вашим номером телефона - не известно."
-msgstr ""
+msgstr "But who, how and why to use your telephone number - is not known."
 
 #: templates/index.html:22
 msgid "Теперь можно быть на связи, не показывая номер своего телефона!"
-msgstr ""
+msgstr "Now you can be connected without revealing your phone number!"
 
 #: templates/index.html:25
 msgid "Для этого мы создали Telegram-бота."
-msgstr ""
+msgstr "To this end, we have created a Telegram-bot."
 
 #: templates/index.html:28
 msgid "Система проста:"
-msgstr ""
+msgstr "Everything is simple:"
 
 #: templates/index.html:30
 msgid "- Заходите в Telegram по ссылке"
-msgstr ""
+msgstr "- Open Telegram chat with bot using link"
 
 #: templates/index.html:30
 msgid " и пишите боту \"привет\"."
-msgstr ""
+msgstr " and say \"Hello\""
 
 #: templates/index.html:38
 msgid ""
 "Или сразу скажите \"/make\" и он автоматически создаст страницу для печати "
 "QR-кода."
-msgstr ""
+msgstr "Or just send \"/make\" command and it will create page for QR-code printing."
 
 #: templates/index.html:40
 msgid ""
 "- Распечатайте страницу и оставляйте ее для связи вместо номера телефона."
-msgstr ""
+msgstr "- Print the page and leave it for communication instead of a phone number."
 
 #: templates/index.html:47
 msgid ""
 "- Если человеку нужно с Вами связаться, он сканирует QR-код или переходит по "
 "текстовой ссылке на страницу браузера."
-msgstr ""
+msgstr "If a person needs to contact you, it scans the QR-code, or use a text link on the browser"
 
 #: templates/index.html:48
 msgid ""
 "При этом ни кто из вас не узнает чужой номер телефона, т.к. Telegram "
 "скрывает его от всех."
-msgstr ""
+msgstr "At the same time none of you will know a foreign phone number, because Telegram hides it from everyone."
 
 #: templates/index.html:51
 msgid ""
 "- После этого Вы сразу получаете сообщение в Telegram с текстом \"Кто-то "
 "ожидает Вас у машины. Когда Вы подойдете?\""
-msgstr ""
+msgstr "After that, you will immediately receive a message in the Telegram with the text \"Someone awaits you at the car. When will you come?\" "
 
 #: templates/index.html:54
 msgid ""
 "- Вы можете ответить выбрав предложенные варианты на виртуальной клавиатуре "
 "или набрав свой вариант вручную."
-msgstr ""
+msgstr "You can answer by selecting the proposed options on the virtual keyboard "
+"or by typing its version manually."
 
 #: templates/index.html:57
 msgid ""
 "- Если кто-то решил подшутить и продолжает слать сообщения, Вы можете на "
 "время заблокировать активность по этому коду либо удалить его полностью. "
-msgstr ""
+msgstr "If someone decided to play a trick and continues to send messages, you can temporarily block the activity of this code, or remove it completely."
 
 #: templates/index.html:58
 msgid "После этого Вы сможете создать новый QR-код, это абсолютно бесплатно."
-msgstr ""
+msgstr "Then you can create your own QR-code, it is absolutely free."
 
 #: templates/index.html:61
 msgid ""
 "- Вы можете создавать и одновременно использовать до 10 QR-кодов, дав им "
 "разные имена. "
-msgstr ""
+msgstr "You can create and simultaneously use up to 10 of QR-codes, giving them different names"
 
 #: templates/index.html:62
 msgid ""
 "Количество создаваемых кодов за историю пользования приложением не "
 "ограничено."
-msgstr ""
+msgstr "Number created in the history of use of the code the application is not limited."
 
 #: templates/index.html:65
 msgid ""
 "- При необходимости можно запросить у бота список всех зарегистрированных на "
 "Ваш номер телефона QR-кодов."
-msgstr ""
+msgstr "If necessary, you can ask the bot list of all registered your phone number of QR-codes."
 
 #: templates/print.html:25
 msgid "Если моя машина Вам мешает, перейдите по ссылке"
-msgstr ""
+msgstr "If my car is stopping you, use the link"
 
 #: templates/print.html:25
 msgid "чтобы отправить мне сообщение или воспользуйтесь QR-кодом."
-msgstr ""
+msgstr "to send me a message or use QR-code."
 
 #: templates/register.html:9
 msgid "Скажите привет нашему боту"
-msgstr ""
+msgstr "Say hello to your bot"
 
 #: templates/register.html:13
 msgid ""
 "telegram.org предложит вам зарегистрироваться, если вы этого ещё не сделали."
-msgstr ""
+msgstr "telegram.org will ask you to register if you have not already."

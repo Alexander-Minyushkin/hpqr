@@ -42,7 +42,7 @@ msgstr ""
 
 #: hpqw/bot_brain.py:35
 msgid "Test from English to Russian"
-msgstr ""
+msgstr "Тест с Английского на Русский"
 
 #: hpqw/bot_brain.py:37
 msgid ""

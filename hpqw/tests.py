@@ -56,6 +56,9 @@ class BotBrainTests(TestCase):
                u'message_id': 4015,
                u'text': u'Some_strange_text'}
         
+        print brain.get_user_lang(200490867)        
+        brain.set_user_lang(200490867, 'en')
+        print brain.get_user_lang(200490867)
         brain.read_msg(test_msg, test_bot, test_host, lambda x: x)
         
         chat_id, msg = test_bot.result()
