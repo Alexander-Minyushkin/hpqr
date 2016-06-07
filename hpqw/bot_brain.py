@@ -35,6 +35,7 @@ test_lang_en_to_en_msg = _(u"Test from English to English")
 test_lang_en_to_ru_msg = _(u"Test from English to Russian")
 
 help_text=(_('Hello! I am Hot Parking Bot. I understand commands:\n\n') +
+           _('/lang_en - for English.\n') +
            _('/make - create QR-code for your car.\n') +
            _('/make xxx - create QR code with car plate number (incomplete is OK). It is convenient if you have several cars.\n') +
            _('/ls - list all active QR-codes.\n') +

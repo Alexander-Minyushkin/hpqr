@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-07 09:09+0300\n"
+"POT-Creation-Date: 2016-06-07 09:21+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -48,72 +48,76 @@ msgid ""
 msgstr ""
 
 #: hpqw/bot_brain.py:38
-msgid "/make - create QR-code for your car.\n"
+msgid "/lang_en - for English.\n"
 msgstr ""
 
 #: hpqw/bot_brain.py:39
+msgid "/make - create QR-code for your car.\n"
+msgstr ""
+
+#: hpqw/bot_brain.py:40
 msgid ""
 "/make xxx - create QR code with car plate number (incomplete is OK). It is "
 "convenient if you have several cars.\n"
 msgstr ""
 
-#: hpqw/bot_brain.py:40
+#: hpqw/bot_brain.py:41
 msgid "/ls - list all active QR-codes.\n"
 msgstr ""
 
-#: hpqw/bot_brain.py:41
+#: hpqw/bot_brain.py:42
 msgid "/del id=XXX - delete code with id=XXX.\n"
 msgstr ""
 
-#: hpqw/bot_brain.py:62
+#: hpqw/bot_brain.py:63
 msgid "Sorry, I understand only text."
 msgstr ""
 
-#: hpqw/bot_brain.py:68
+#: hpqw/bot_brain.py:69
 msgid "Sorry, we don't support this language."
 msgstr ""
 
-#: hpqw/bot_brain.py:73
+#: hpqw/bot_brain.py:74
 msgid "Now it's better."
 msgstr ""
 
-#: hpqw/bot_brain.py:78
+#: hpqw/bot_brain.py:79
 msgid "Sorry, you have too many registred codes."
 msgstr ""
 
-#: hpqw/bot_brain.py:83 hpqw/bot_brain.py:106
+#: hpqw/bot_brain.py:84 hpqw/bot_brain.py:107
 msgid "Print your QR-code: "
 msgstr ""
 
-#: hpqw/bot_brain.py:86
+#: hpqw/bot_brain.py:87
 msgid "Active QR-codes:\n"
 msgstr ""
 
-#: hpqw/bot_brain.py:87
+#: hpqw/bot_brain.py:88
 msgid "no codes."
 msgstr ""
 
-#: hpqw/bot_brain.py:89
+#: hpqw/bot_brain.py:90
 msgid " "
 msgstr ""
 
-#: hpqw/bot_brain.py:113
+#: hpqw/bot_brain.py:114
 msgid "Sorry, I can not find this id."
 msgstr ""
 
-#: hpqw/bot_brain.py:121 hpqw/bot_brain.py:141
+#: hpqw/bot_brain.py:122 hpqw/bot_brain.py:142
 msgid "Sorry, I did not understand what you said."
 msgstr ""
 
-#: hpqw/bot_brain.py:130
+#: hpqw/bot_brain.py:131
 msgid "Sorry, you have many codes. Provide particular id."
 msgstr ""
 
-#: hpqw/bot_brain.py:135
+#: hpqw/bot_brain.py:136
 msgid "Will come back soon."
 msgstr ""
 
-#: hpqw/bot_brain.py:145
+#: hpqw/bot_brain.py:146
 msgid ""
 "\n"
 "You can read more here: "
