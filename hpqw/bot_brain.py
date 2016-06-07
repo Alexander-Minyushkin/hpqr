@@ -45,6 +45,8 @@ def get_help_text():
            
 def get_user_lang(chat_id):
     x = Language.objects.filter(telegram_id=chat_id)
+    
+    print 'get_user_lang :' + str(len(x) )
     if (len(x) == 1):
         return x[0].prefix        
     return 'ru'
