@@ -83,7 +83,7 @@ def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ =
             return
         
         set_user_lang(chat_id, lang)
-        translation.activate(get_user_lang(chat_id))
+        translation.activate(lang)
         bot.sendMessage(chat_id, _("Now it's better."))
         return
     
