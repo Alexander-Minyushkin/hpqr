@@ -46,8 +46,7 @@ def robots(request):
 @gzip_page    
 def register(request):   
     return render(request, 'register.html', 
-                  {'bot_help_text':brain.help_text, 
-                   'bot_getMe':bot.getMe(),
+                  {'bot_getMe':bot.getMe(),
                    'HPQR_HOST':HPQR_HOST,
                    'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
  

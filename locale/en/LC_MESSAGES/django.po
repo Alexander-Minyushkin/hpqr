@@ -238,7 +238,7 @@ msgstr " and say \"Hello\""
 
 #: templates/index.html:32
 msgid "- В ответ Вы получаете короткую инструкцию по работе."
-msgstr ""
+msgstr "- It will answer with short instruction about its work."
 
 #: templates/index.html:38
 msgid ""
