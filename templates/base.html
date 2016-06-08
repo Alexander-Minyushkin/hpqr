@@ -51,18 +51,24 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
-   
+    {% get_current_language as LANGUAGE_CODE %}
+
     <header class="mui-appbar mui--z1">
       <div class="mui-container">
         <table width="100%">
           <tbody><tr class="mui--appbar-height">
-            <td class="mui--text-title"><a href="/">Hot Parking (QR)</a></td>
+            <td class="mui--text-title"><a href="index">Hot Parking (QR)</a></td>
             <td align="right">
               <ul class="mui-list--inline mui--text-body2">
-                <li><a href="/">{% trans 'Главная' %}</a></li>
+                <li><a href="index">{% trans 'Главная' %}</a></li>
                 <li><a href="register">{% trans 'Регистрация' %}</a></li>
                 <li><a href="credits">{% trans 'Благодарности' %}</a></li>
                 <li><a href="contact">{% trans 'Контакты' %}</a></li>
+                {% if LANGUAGE_CODE == "en" %}
+                <li><a href="/ru{{ request.path|slice:'3:'  }}">По Русски</a></li>
+                {% else %}
+                <li><a href="/en{{ request.path|slice:'3:'  }}">In English</a></li>
+                {% endif %}
               </ul>
             </td>
           </tr>
