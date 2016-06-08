@@ -146,7 +146,7 @@ msgstr "Parking bot"
 
 #: templates/base.html:29 templates/index.html:10
 msgid "Вы часто даете свой номер телефона незнакомым людям?"
-msgstr "You often give their phone number to strangers?"
+msgstr "Are You often give your phone number to strangers?"
 
 #: templates/base.html:30 templates/index.html:12
 msgid "А людям, которых никогда даже не видели?"
