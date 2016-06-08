@@ -68,9 +68,11 @@ def set_user_lang(chat_id, lang):
 def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ = _):
 
     content_type, chat_type, chat_id = telepot.glance(msg)
-    print "read_msg, " + str(chat_id) + ", " + str(content_type) + ", " + get_user_lang(chat_id)
+
+    user_lang = get_user_lang(chat_id)
+    print "read_msg, " + str(chat_id) + ", " + str(content_type) + ", " + user_lang
     
-    translation.activate(get_user_lang(chat_id))
+    translation.activate(user_lang)
     
     if content_type != 'text':
         bot.sendMessage(chat_id, _('Sorry, I understand only text.'))
@@ -156,5 +158,5 @@ def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ =
             pass
 
     
-    bot.sendMessage(chat_id, get_help_text() + _('\nYou can read more here: ' + host_name))
+    bot.sendMessage(chat_id, get_help_text() + _('\nYou can read more here: ' + host_name +'/' + user_lang))
 
