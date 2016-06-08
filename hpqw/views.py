@@ -74,6 +74,9 @@ def check_inputs(id, pin):
 def print_page(request, id, pin): 
     check_inputs(id, pin)
     
+    con = Connection.objects.get(id=id)
+    translation.activate(brain.get_user_lang(con.telegram_id)) # Optimization is possible using join
+    
     message_link = HPQR_HOST +"/" + id + "." + pin    
     return render(request, 'print.html', {'message_link':message_link, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
  
