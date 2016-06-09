@@ -46,12 +46,10 @@ def get_help_text():
 def get_user_lang(chat_id):
     x = Language.objects.filter(telegram_id=chat_id)
     
-    print 'get_user_lang :' + str(len(x) )
     if (len(x) == 1):
         return x[0].prefix        
     if (len(x) > 1):
-        Language.objects.filter(telegram_id=chat_id).delete()    
-        print 'get_user_lang : deleted extended Language records'
+        Language.objects.filter(telegram_id=chat_id).delete()   
     return 'ru'
     
 def set_user_lang(chat_id, lang):
@@ -70,7 +68,7 @@ def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ =
     content_type, chat_type, chat_id = telepot.glance(msg)
 
     user_lang = get_user_lang(chat_id)
-    print "read_msg, " + str(chat_id) + ", " + str(content_type) + ", " + user_lang
+    #print "read_msg, " + str(chat_id) + ", " + str(content_type) + ", " + user_lang
     
     translation.activate(user_lang)
     

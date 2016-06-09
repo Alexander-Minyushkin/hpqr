@@ -55,15 +55,13 @@ class BotBrainTests(TestCase):
                          u'last_name': u'Lee'},
                u'message_id': 4015,
                u'text': u'Some_strange_text'}
-        
-        print brain.get_user_lang(200490867)        
+                    
         brain.set_user_lang(200490867, 'en')
-        print brain.get_user_lang(200490867)
+        
         brain.read_msg(test_msg, test_bot, test_host, lambda x: x)
         
         chat_id, msg = test_bot.result()
-        
-        print msg
+                
         self.assertEqual('hello' in msg.lower(), True)
         self.assertEqual(size_before, Connection.objects.all().count())
         
@@ -229,6 +227,71 @@ class BotBrainTests(TestCase):
         chat_id, msg = test_bot.result()        
         self.assertEqual('removed 5 codes' in msg.lower(), True)
         self.assertEqual(size_before, Connection.objects.all().count())
+
+    def test_del_not_your_id(self):
+        """
+        User may try to delete id which is owned by somebody else
+        He should fail
+        """
+        test_bot = BotStab()
+        test_host = 'test.host'
+        
+        size_before = Connection.objects.all().count()
+        
+        test_msg = {u'chat': {u'first_name': u'Nick',
+                         u'id': 200490867,
+                         u'last_name': u'Lee',
+                         u'type': u'private'},
+               u'date': 1444723969,
+               u'from': {u'first_name': u'Nick',
+                         u'id': 200490867,
+                         u'last_name': u'Lee'},
+               u'message_id': 4015,
+               u'text': u'/make'}
+        
+        brain.read_msg(test_msg, test_bot, test_host, lambda x: x)
+        chat_id, msg = test_bot.result()     
+        del_command = u'/del id=' + msg.split('/')[2].split('.')[0]
+                
+        self.assertEqual('print' in msg.lower(), True)
+        self.assertEqual(size_before+1, Connection.objects.all().count())
+        
+        test_msg = {u'chat': {u'first_name': u'Nick',
+                         u'id': 200490866,
+                         u'last_name': u'Lee',
+                         u'type': u'private'},
+               u'date': 1444723969,
+               u'from': {u'first_name': u'Nick',
+                         u'id': 200490866,
+                         u'last_name': u'Lee'},
+               u'message_id': 4015,
+               u'text': u'/make'}
+        
+        brain.read_msg(test_msg, test_bot, test_host, lambda x: x)
+        chat_id, msg = test_bot.result()  
+        
+        self.assertEqual('print' in msg.lower(), True)
+        self.assertEqual(size_before+2, Connection.objects.all().count())
+        
+        test_msg = {u'chat': {u'first_name': u'Nick',
+                         u'id': 200490866,
+                         u'last_name': u'Lee',
+                         u'type': u'private'},
+               u'date': 1444723969,
+               u'from': {u'first_name': u'Nick',
+                         u'id': 200490866,
+                         u'last_name': u'Lee'},
+               u'message_id': 4015,
+               u'text': del_command}
+        
+        brain.read_msg(test_msg, test_bot, test_host, lambda x: x)
+        chat_id, msg = test_bot.result()  
+        self.assertEqual('sorry' in msg.lower(), True)        
+        
+#        brain.read_msg(test_msg, test_bot, test_host, lambda x: x)        
+#        chat_id, msg = test_bot.result()        
+#        self.assertEqual('print' in msg.lower(), True)
+#        self.assertEqual(size_before+2, Connection.objects.all().count())
         
     def test_lang_list(self):
         """
