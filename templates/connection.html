@@ -11,7 +11,7 @@
           
     <p class="lead"> {% trans 'Сообщение отправлено владельцу машины.' %}</p>
 
-    <p class="lead"> {% trans 'Его ответ:' %} {{reply_message}}</p>      
+    <p class="lead"> {% trans 'Его ответ:' %} {% trans {{reply_message}} %}</p>      
         
     <button onclick="myFunction()" id="button" class="mui-btn mui-btn--raised">{% trans 'Отправить ещё раз.' %}</button>   
 </td>
