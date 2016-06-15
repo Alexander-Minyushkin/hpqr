@@ -85,7 +85,7 @@ def connection(request, id, pin):
     con = Connection.objects.get(id=id)
     
     print "check 1, lang:" + translation.get_language()
-    reply_message = _(con.message)           
+    
         
     if timezone.now() > con.wait_till: # This is small spam protection
         cur_language = translation.get_language()
@@ -111,6 +111,8 @@ def connection(request, id, pin):
             print "check 3, lang:" + translation.get_language()
     
     print "check 4, lang:" + translation.get_language()
+    
+    reply_message = _(con.message)           
     reply_time = (con.wait_till - timezone.now()).seconds
     #return HttpResponse("Good!: " + id + " -> " + pin)
     return render(request, 'connection.html', 
