@@ -84,13 +84,14 @@ def connection(request, id, pin):
     check_inputs(id, pin)
     con = Connection.objects.get(id=id)
     
-    reply_message = _(con.message)
-    reply_time = (con.wait_till - timezone.now()).seconds       
+    print "check 1, lang:" + translation.get_language()
+    reply_message = _(con.message)           
         
     if timezone.now() > con.wait_till: # This is small spam protection
         cur_language = translation.get_language()
         try:
             translation.activate(brain.get_user_lang(con.telegram_id)) # Optimization is possible using join
+            print "check 2, lang:" + translation.get_language()
 
             con.message = ""
             con.wait_till = timezone.now() + timedelta(minutes = 1)  
@@ -107,7 +108,10 @@ def connection(request, id, pin):
                         reply_markup=show_keyboard)
         finally:
             translation.activate(cur_language)
-        
+            print "check 3, lang:" + translation.get_language()
+    
+    print "check 4, lang:" + translation.get_language()
+    reply_time = (con.wait_till - timezone.now()).seconds
     #return HttpResponse("Good!: " + id + " -> " + pin)
     return render(request, 'connection.html', 
                   {'id':id, 'pin':pin, 'reply_message':reply_message, 'reply_time':reply_time, 'HPQR_HOST':HPQR_HOST, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
