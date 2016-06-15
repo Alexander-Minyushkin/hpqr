@@ -109,7 +109,7 @@ def connection(request, id, pin):
     reply_time = (con.wait_till - timezone.now()).seconds       
     #return HttpResponse("Good!: " + id + " -> " + pin)
     return render(request, 'connection.html', 
-                  {'id':id, 'pin':pin, 'reply_message':reply_message, 'reply_time':reply_time, 'HPQR_HOST':HPQR_HOST, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
+                  {'id':id, 'pin':pin, 'reply_message':_(reply_message), 'reply_time':reply_time, 'HPQR_HOST':HPQR_HOST, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
   
 def bad_request(request): 
     response = render(request, '404.html', {'HPQR_HOST':HPQR_HOST, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
