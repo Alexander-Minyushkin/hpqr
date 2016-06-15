@@ -83,6 +83,9 @@ def print_page(request, id, pin):
 def connection(request, id, pin):  
     check_inputs(id, pin)
     con = Connection.objects.get(id=id)
+    
+    reply_message = _(con.message)
+    reply_time = (con.wait_till - timezone.now()).seconds       
         
     if timezone.now() > con.wait_till: # This is small spam protection
         cur_language = translation.get_language()
@@ -104,12 +107,10 @@ def connection(request, id, pin):
                         reply_markup=show_keyboard)
         finally:
             translation.activate(cur_language)
-    
-    reply_message = con.message       
-    reply_time = (con.wait_till - timezone.now()).seconds       
+        
     #return HttpResponse("Good!: " + id + " -> " + pin)
     return render(request, 'connection.html', 
-                  {'id':id, 'pin':pin, 'reply_message':_(reply_message), 'reply_time':reply_time, 'HPQR_HOST':HPQR_HOST, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
+                  {'id':id, 'pin':pin, 'reply_message':reply_message, 'reply_time':reply_time, 'HPQR_HOST':HPQR_HOST, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
   
 def bad_request(request): 
     response = render(request, '404.html', {'HPQR_HOST':HPQR_HOST, 'HPQR_YANDEX_METRIKA' : HPQR_YANDEX_METRIKA})
