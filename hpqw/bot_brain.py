@@ -1,7 +1,7 @@
 # coding: utf-8
 import telepot
 from django.utils import timezone
-from django.utils.translation import ugettext_lazy, ugettext
+from django.utils.translation import ugettext_lazy, ugettext, ugettext_noop
 def _(x): return unicode(ugettext(x))
 from django.utils import translation
 #def _(x): return ugettext_lazy(x)
@@ -146,7 +146,7 @@ def read_msg(msg = msg, bot = real_bot, host_name = "http://127.0.0.1:8000", _ =
             else: 
                 id_ = int(st[2].split('=')[1])
                 con = all_con.filter(id = id_)[0]            
-            con.message = _("Will come back soon.")            
+            con.message = ugettext_noop("Will come back soon.")            
             con.wait_till = timezone.now() + timedelta(minutes = num)            
             con.save()            
             #bot.sendMessage(chat_id, _('I am hiding keyboard'), reply_markup={'hide_keyboard': True})

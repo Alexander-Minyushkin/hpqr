@@ -83,16 +83,12 @@ def print_page(request, id, pin):
 def connection(request, id, pin):  
     check_inputs(id, pin)
     con = Connection.objects.get(id=id)
-    
-    print "check 1, lang:" + translation.get_language()
-    
         
     if timezone.now() > con.wait_till: # This is small spam protection
         cur_language = translation.get_language()
         try:
             translation.activate(brain.get_user_lang(con.telegram_id)) # Optimization is possible using join
-            print "check 2, lang:" + translation.get_language()
-
+    
             con.message = ""
             con.wait_till = timezone.now() + timedelta(minutes = 1)  
             con.save()
@@ -107,10 +103,7 @@ def connection(request, id, pin):
                         _(u"Кто-то ожидает вас у машины ") + specific + _(u". Когда вы подойдёте?") , 
                         reply_markup=show_keyboard)
         finally:
-            translation.activate(cur_language)
-            print "check 3, lang:" + translation.get_language()
-    
-    print "check 4, lang:" + translation.get_language()
+            translation.activate(cur_language)    
     
     reply_message = _(con.message)           
     reply_time = (con.wait_till - timezone.now()).seconds
